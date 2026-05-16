@@ -1,31 +1,28 @@
 import pandas as pd
 
 from app.connectors.connector_manager import ConnectorManager
+from app.utils.period_parser import filter_by_date
 
 
 class InvoiceMatchingService:
     def __init__(self):
         self.connector = ConnectorManager()
 
-    def reconcile_invoices(self) -> dict:
+    def reconcile_invoices(self, period=None) -> dict:
         invoices = self.connector.load_csv("invoices.csv")
         orders = self.connector.load_csv("orders.csv")
         payments = self.connector.load_csv("payments.csv")
 
-        invoices["total_amount"] = pd.to_numeric(
-            invoices["total_amount"],
-            errors="coerce"
-        ).fillna(0)
+        start_date = period.get("start_date") if period else None
+        end_date = period.get("end_date") if period else None
 
-        orders["net_amount"] = pd.to_numeric(
-            orders["net_amount"],
-            errors="coerce"
-        ).fillna(0)
+        invoices = filter_by_date(invoices, "invoice_date", start_date, end_date)
+        orders = filter_by_date(orders, "order_date", start_date, end_date)
+        payments = filter_by_date(payments, "payment_date", start_date, end_date)
 
-        payments["amount"] = pd.to_numeric(
-            payments["amount"],
-            errors="coerce"
-        ).fillna(0)
+        invoices["total_amount"] = pd.to_numeric(invoices["total_amount"], errors="coerce").fillna(0)
+        orders["net_amount"] = pd.to_numeric(orders["net_amount"], errors="coerce").fillna(0)
+        payments["amount"] = pd.to_numeric(payments["amount"], errors="coerce").fillna(0)
 
         valid_order_ids = set(orders["order_id"].astype(str))
 
@@ -43,10 +40,7 @@ class InvoiceMatchingService:
             )
         ]
 
-        high_value_invoices = invoices.sort_values(
-            "total_amount",
-            ascending=False
-        ).head(10)
+        high_value_invoices = invoices.sort_values("total_amount", ascending=False).head(10)
 
         payment_lookup = payments.groupby("order_id")["amount"].sum().to_dict()
 
@@ -60,10 +54,8 @@ class InvoiceMatchingService:
             order_id = str(invoice["order_id"])
             invoice_amount = float(invoice["total_amount"])
             payment_amount = float(payment_lookup.get(order_id, 0))
-
             difference = round(invoice_amount - payment_amount, 2)
 
-            # only flag meaningful mismatch, not every small difference
             if abs(difference) > max(500, payment_amount * 0.15):
                 mismatches.append({
                     "invoice_id": invoice.get("invoice_id"),
@@ -76,6 +68,7 @@ class InvoiceMatchingService:
                 })
 
         return {
+            "period": period,
             "total_invoices": int(len(invoices)),
             "duplicate_invoice_count": int(len(duplicate_invoice_numbers)),
             "invalid_order_invoice_count": int(len(invalid_order_invoices)),

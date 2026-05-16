@@ -4,8 +4,9 @@ from app.agents.revenue_agent import RevenueAgent
 from app.agents.invoice_agent import InvoiceAgent
 from app.agents.leakage_agent import LeakageAgent
 from app.agents.margin_agent import MarginAgent
+from app.agents.statistics_agent import StatisticsAgent
 from app.agents.memo_agent import MemoAgent
-
+from app.agents.period_agent import PeriodAgent
 
 class FinanceAgentRuntime:
     def __init__(self):
@@ -14,7 +15,9 @@ class FinanceAgentRuntime:
             "invoice_agent": InvoiceAgent(),
             "leakage_agent": LeakageAgent(),
             "margin_agent": MarginAgent(),
+            "statistics_agent": StatisticsAgent(),
             "memo_agent": MemoAgent(),
+            "period_agent": PeriodAgent(),
         }
 
     async def run_agent(self, agent_name, state):
@@ -27,7 +30,10 @@ class FinanceAgentRuntime:
             for agent_name in agent_names
         ]
 
-        results = await asyncio.gather(*tasks, return_exceptions=True)
+        results = await asyncio.gather(
+            *tasks,
+            return_exceptions=True,
+        )
 
         for result in results:
             if isinstance(result, Exception):
@@ -44,7 +50,6 @@ class FinanceAgentRuntime:
 
             if mode == "parallel":
                 state = await self.run_parallel(agents, state)
-
             else:
                 for agent_name in agents:
                     state = await self.run_agent(agent_name, state)

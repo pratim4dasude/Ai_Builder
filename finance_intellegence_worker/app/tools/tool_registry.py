@@ -4,6 +4,7 @@ from app.tools.finance_tools import (
     LeakageDetectionTool,
     MarginRefundTool,
     FinanceDataValidationTool,
+    StatisticsTool,
 )
 
 
@@ -15,6 +16,7 @@ class ToolRegistry:
             "leakage_detection_tool": LeakageDetectionTool(),
             "margin_refund_tool": MarginRefundTool(),
             "finance_data_validation_tool": FinanceDataValidationTool(),
+            "statistics_tool": StatisticsTool(),
         }
 
     def get_tool(self, tool_name: str):
