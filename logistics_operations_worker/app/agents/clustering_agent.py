@@ -1,5 +1,5 @@
 from app.agents.state import LogisticsAgentState
-from app.services.clustering_service import cluster_assigned_orders
+from app.tools.setup_tools import tool_registry
 
 
 class ClusteringAgent:
@@ -11,6 +11,7 @@ class ClusteringAgent:
                 "summary": "No warehouse plan found. Run WarehouseAgent first.",
                 "total_clusters": 0,
                 "clusters": [],
+                "sample_clusters": [],
             }
 
             state.add_step(
@@ -21,27 +22,25 @@ class ClusteringAgent:
 
             return state
 
-        assignments = state.warehouse_plan.get("assignments", [])
+        tool = tool_registry.get_tool("create_clusters")
 
-        if not assignments:
+        if tool is None:
             state.clusters = {
-                "summary": "No assigned orders available for clustering.",
+                "summary": "create_clusters tool not found in tool registry.",
                 "total_clusters": 0,
                 "clusters": [],
+                "sample_clusters": [],
             }
 
             state.add_step(
                 self.name,
-                "completed",
-                "No assigned orders found for clustering",
+                "failed",
+                "create_clusters tool not found in tool registry",
             )
 
             return state
 
-        state.clusters = cluster_assigned_orders(
-            assignments=assignments,
-            radius_km=3.0,
-        )
+        state.clusters = tool.run(state)
 
         state.add_step(
             self.name,
