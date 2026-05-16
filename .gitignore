@@ -9,14 +9,14 @@ build/
 
 # Virtual environment
 venv/
-.env/
+logistics_operations_worker/.env/
 .venv/
 
 # Environment files
-.env
+logistics_operations_worker/.env
 .env.local
 *.env
-
+logistics_operations_worker/app/reports
 # IDE
 .vscode/
 .idea/
