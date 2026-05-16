@@ -141,7 +141,6 @@ Return JSON format:
 
             if not valid_agents:
                 continue
-
             cleaned_plan.append(
                 {
                     "step": step.get("step"),
