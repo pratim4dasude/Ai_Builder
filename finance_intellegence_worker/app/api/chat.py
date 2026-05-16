@@ -9,7 +9,7 @@ from app.agents.supervisor_agent import SupervisorAgent
 from app.agents.planner_agent import PlannerAgent
 from app.runtime.agent_runtime import FinanceAgentRuntime
 from app.utils.sse import sse_event
-
+from app.utils.json_cleaner import clean_json
 
 router = APIRouter()
 
@@ -46,7 +46,7 @@ async def run_finance_workflow(request: ChatRequest) -> FinanceAgentState:
 async def chat(request: ChatRequest):
     state = await run_finance_workflow(request)
 
-    return {
+    response = {
         "session_id": state.session_id,
         "query": state.user_query,
         "selected_agents": state.selected_agents,
@@ -55,9 +55,13 @@ async def chat(request: ChatRequest):
         "invoice_analysis": state.invoice_analysis,
         "leakage_analysis": state.leakage_analysis,
         "margin_analysis": state.margin_analysis,
+        "statistics_analysis": state.statistics_analysis,
         "memo": state.final_memo,
         "errors": state.errors,
+        "period": state.period,
     }
+
+    return clean_json(response)
 
 
 @router.post("/chat/stream")
@@ -109,10 +113,12 @@ async def chat_stream(request: ChatRequest):
 
         yield sse_event(
             "final_output",
-            {
+            clean_json({
+                "period": state.period,
+                "statistics_analysis": state.statistics_analysis,
                 "memo": state.final_memo,
                 "errors": state.errors,
-            },
+            }),
         )
 
     return EventSourceResponse(event_generator())
