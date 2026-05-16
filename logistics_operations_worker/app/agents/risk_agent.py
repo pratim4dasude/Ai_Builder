@@ -1,6 +1,5 @@
 from app.agents.state import LogisticsAgentState
-from app.connectors.connector_manager import ConnectorManager
-from app.services.risk_service import detect_delivery_risks
+from app.tools.setup_tools import tool_registry
 
 
 class RiskAgent:
@@ -10,9 +9,12 @@ class RiskAgent:
         if not state.warehouse_plan:
             state.risks = {
                 "summary": "No warehouse plan found. Run WarehouseAgent first.",
+                "total_orders_checked": 0,
                 "total_risky_orders": 0,
                 "risk_counts": {},
+                "high_rto_areas": [],
                 "sample_risks": [],
+                "all_risks": [],
             }
 
             state.add_step(
@@ -23,14 +25,28 @@ class RiskAgent:
 
             return state
 
-        manager = ConnectorManager()
-        data = manager.load_all()
+        tool = tool_registry.get_tool("analyze_risk")
 
-        state.risks = detect_delivery_risks(
-            orders=data["orders"],
-            shipments=data["shipments"],
-            warehouse_plan=state.warehouse_plan,
-        )
+        if tool is None:
+            state.risks = {
+                "summary": "analyze_risk tool not found in tool registry.",
+                "total_orders_checked": 0,
+                "total_risky_orders": 0,
+                "risk_counts": {},
+                "high_rto_areas": [],
+                "sample_risks": [],
+                "all_risks": [],
+            }
+
+            state.add_step(
+                self.name,
+                "failed",
+                "analyze_risk tool not found in tool registry",
+            )
+
+            return state
+
+        state.risks = tool.run(state)
 
         state.add_step(
             self.name,
