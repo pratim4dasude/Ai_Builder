@@ -7,5 +7,5 @@ class InvoiceAgent:
 
     def run(self, state: FinanceAgentState) -> FinanceAgentState:
         tool = tool_registry.get_tool("invoice_matching_tool")
-        state.invoice_analysis = tool.run()
+        state.invoice_analysis = tool.run(period=state.period)
         return state

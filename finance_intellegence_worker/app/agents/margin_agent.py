@@ -7,5 +7,5 @@ class MarginAgent:
 
     def run(self, state: FinanceAgentState) -> FinanceAgentState:
         tool = tool_registry.get_tool("margin_refund_tool")
-        state.margin_analysis = tool.run()
+        state.margin_analysis = tool.run(period=state.period)
         return state
