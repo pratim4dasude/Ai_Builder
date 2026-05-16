@@ -1,5 +1,5 @@
 from app.agents.state import LogisticsAgentState
-from app.services.route_service import generate_routes_for_clusters
+from app.tools.setup_tools import tool_registry
 
 
 class RoutingAgent:
@@ -10,7 +10,9 @@ class RoutingAgent:
             state.routes = {
                 "summary": "No clusters found. Run ClusteringAgent first.",
                 "total_clusters_routed": 0,
+                "estimated_total_route_distance_km": 0,
                 "routes": [],
+                "sample_routes": [],
             }
 
             state.add_step(
@@ -21,7 +23,26 @@ class RoutingAgent:
 
             return state
 
-        state.routes = generate_routes_for_clusters(state.clusters)
+        tool = tool_registry.get_tool("generate_routes")
+
+        if tool is None:
+            state.routes = {
+                "summary": "generate_routes tool not found in tool registry.",
+                "total_clusters_routed": 0,
+                "estimated_total_route_distance_km": 0,
+                "routes": [],
+                "sample_routes": [],
+            }
+
+            state.add_step(
+                self.name,
+                "failed",
+                "generate_routes tool not found in tool registry",
+            )
+
+            return state
+
+        state.routes = tool.run(state)
 
         state.add_step(
             self.name,
