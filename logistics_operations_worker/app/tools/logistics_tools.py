@@ -30,6 +30,15 @@ class CreateClustersTool(BaseTool):
     def run(self, state):
         assignments = state.warehouse_plan.get("assignments", [])
 
+        if not assignments:
+            return {
+                "summary": "No assigned orders available for clustering.",
+                "total_clusters": 0,
+                "radius_km": 3.0,
+                "clusters": [],
+                "sample_clusters": [],
+            }
+
         return cluster_assigned_orders(
             assignments=assignments,
             radius_km=3.0,
