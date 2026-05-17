@@ -19,7 +19,8 @@ class LogisticsAgentState(BaseModel):
     execution_plan: List[Dict[str, Any]] = Field(default_factory=list)
     steps: List[AgentStep] = Field(default_factory=list)
     runtime_logs: List[Dict[str, Any]] = Field(default_factory=list)
-
+    previous_context: Dict[str, Any] = Field(default_factory=dict)
+    conversation_history: List[Dict[str, Any]] = Field(default_factory=list)
     warehouse_plan: Optional[Dict[str, Any]] = None
     clusters: Optional[Dict[str, Any]] = None
     routes: Optional[Dict[str, Any]] = None
