@@ -1,0 +1,7 @@
+warehouse_id,merchant_id,warehouse_name,address,city,pincode,latitude,longitude,zone,capacity_per_day,current_load,cutoff_time
+WH_EAST,M001,Bangalore East Warehouse,"KR Puram, Bangalore",Bangalore,560036,13.0072,77.6959,East,1200,240,17:00
+WH_SOUTH,M001,Bangalore South Warehouse,"HSR Layout, Bangalore",Bangalore,560102,12.9122,77.6480,South,1000,210,16:30
+WH_NORTH,M001,Bangalore North Warehouse,"Hebbal, Bangalore",Bangalore,560024,13.0358,77.5970,North,900,180,17:30
+WH_WEST,M001,Bangalore West Warehouse,"Rajajinagar, Bangalore",Bangalore,560010,12.9915,77.5550,West,850,160,17:00
+WH_CENTRAL,M001,Bangalore Central Warehouse,"Indiranagar, Bangalore",Bangalore,560038,12.9784,77.6408,Central,1100,300,18:00
+WH_SOUTHWEST,M001,Bangalore South-West Warehouse,"Banashankari, Bangalore",Bangalore,560085,12.9255,77.5468,South-West,750,140,16:00

@@ -29,19 +29,13 @@ Thumbs.db
 *.log
 
 # Data / outputs
-data/
+
 outputs/
-logs/
-*.csv
-*.xlsx
-*.json
+
 
 # Models / checkpoints
-models/
+
 checkpoints/
-*.pt
-*.pth
-*.ckpt
 *.safetensors
 *.onnx
 
