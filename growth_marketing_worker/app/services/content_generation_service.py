@@ -27,14 +27,20 @@ class ContentGenerationService:
         )
 
         system_prompt = """
-You are a Growth Marketing Content Agent for a D2C ecommerce AI worker.
+You are a senior Growth Marketing Content Agent for a D2C ecommerce AI worker.
 
 Your job:
-- Generate channel-specific marketing content.
-- Use only the provided product, segment, channel, and timing data.
+- Generate sharper, more natural, channel-specific marketing copy.
+- Use only the provided product, segment, city, channel, and posting time.
 - Do not invent numbers.
-- Do not claim discounts unless discount data is provided.
-- Keep copy concise, realistic, and brand-safe.
+- Do not mention discounts unless discount data is provided.
+- Do not say "limited stock" unless inventory is low.
+- Do not copy fallback text directly.
+- Keep the language premium, concise, and conversion-focused.
+- Make Instagram more energetic.
+- Make WhatsApp direct and personal.
+- Make email clean and useful.
+- Make LinkedIn business-friendly.
 - Return valid JSON only.
 
 Return JSON with this exact schema:
@@ -57,11 +63,20 @@ Return JSON with this exact schema:
 """
 
         payload = {
-            "recommended_product": recommended_product,
+            "recommended_product": {
+                "product_name": recommended_product.get("product_name"),
+                "category": recommended_product.get("category"),
+                "subcategory": recommended_product.get("subcategory"),
+                "target_segment": recommended_product.get("target_segment"),
+                "price": recommended_product.get("price"),
+                "inventory_count": recommended_product.get("inventory_count"),
+                "margin_percent": recommended_product.get("margin_percent"),
+                "promotion_readiness_score": recommended_product.get("promotion_readiness_score"),
+            },
             "target_segment": target_segment,
             "posting_time": posting_time,
             "top_channels": campaign_performance.get("top_channels", [])[:3],
-            "fallback_content": fallback,
+            "fallback_content_style_reference": fallback,
         }
 
         return self.llm_service.generate_json(
@@ -82,6 +97,13 @@ Return JSON with this exact schema:
         city = target_segment.get("recommended_city", "Bangalore")
         channel = posting_time.get("best_channel") or self._best_channel(campaign_performance)
         time_window = posting_time.get("recommended_window", "19:00 - 21:00")
+        inventory_count = recommended_product.get("inventory_count", 0)
+
+        stock_line = (
+            f"Only {inventory_count} units available."
+            if inventory_count and inventory_count < 50
+            else "Available now."
+        )
 
         return {
             "status": "success",
@@ -89,14 +111,14 @@ Return JSON with this exact schema:
             "product_name": product_name,
             "recommended_channel": channel,
             "recommended_posting_time": time_window,
-            "content_strategy": "Promote the selected product using comfort, demand, and everyday-style positioning.",
+            "content_strategy": "Use everyday-style positioning with a clear product-first message.",
             "content_variants": {
-                "instagram": f"{product_name} is built for everyday comfort and clean style. Perfect for {segment} in {city}. Drop goes live around {time_window}.",
-                "facebook": f"Upgrade your everyday wardrobe with {product_name}. Strong demand, great value, and a style your customers are already responding to.",
-                "whatsapp": f"Hey! {product_name} is trending now. Limited stock available for {city}. Shop before it sells out.",
-                "email_subject": f"Trending now: {product_name}",
-                "email_body": f"Hi, we picked {product_name} for you because it is showing strong demand, healthy campaign performance, and good promotion readiness. Explore it today.",
-                "linkedin": f"{product_name} is showing strong growth and engagement signals across our commerce data. Recommended for a focused growth push this week.",
+                "instagram": f"{product_name} is made for everyday style and comfort. Perfect for {segment} in {city}. Catch it around {time_window}.",
+                "facebook": f"Refresh your wardrobe with {product_name}. A strong pick for customers looking for comfort, style, and daily wear value.",
+                "whatsapp": f"Hey! {product_name} is a top pick today. {stock_line} Best time to check it out: {time_window}.",
+                "email_subject": f"Today’s top pick: {product_name}",
+                "email_body": f"Hi, {product_name} is showing strong demand and good promotion readiness. It is a great fit for {segment} in {city}.",
+                "linkedin": f"{product_name} is showing strong commerce signals across growth, engagement, and promotion readiness.",
             },
         }
 

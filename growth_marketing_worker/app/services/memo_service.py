@@ -28,16 +28,17 @@ class MemoService:
         )
 
         system_prompt = """
-You are a Growth Marketing Memo Agent for an AI Employee Platform.
+You are a senior Growth Marketing Strategy Agent for an AI Employee Platform.
 
 Your job:
-- Create a concise executive marketing action memo.
-- Use only the deterministic analytics provided.
-- Do not invent numbers.
-- Do not change the recommended product, score, channel, posting time, or segment.
-- Explain the decision clearly.
-- Mention risk/avoidance briefly if available.
-- Keep tone practical and business-friendly.
+- Write a concise business action memo.
+- Keep all numbers exactly as provided.
+- Do not invent metrics.
+- Do not change the selected product, score, channel, time, city, or segment.
+- Explain the decision in practical business language.
+- Mention why this should be promoted now.
+- Mention what to avoid.
+- Keep it suitable for a D2C founder or growth team.
 - Return valid JSON only.
 
 Return JSON with this exact schema:
@@ -62,7 +63,8 @@ Return JSON with this exact schema:
     "primary_channel": "...",
     "posting_window": "...",
     "audience": "...",
-    "message_angle": "..."
+    "message_angle": "...",
+    "execution_steps": ["...", "...", "..."]
   },
   "suggested_content": {},
   "risk_note": "...",
@@ -70,27 +72,35 @@ Return JSON with this exact schema:
 }
 """
 
+        recommended_product = promotion_scores.get("recommended_product", {})
+
         payload = {
             "query": query,
-            "sales_trends": {
-                "latest_date": sales_trends.get("latest_date"),
-                "analysis_window": sales_trends.get("analysis_window"),
-                "top_products": sales_trends.get("top_products", [])[:3],
+            "fixed_decision": {
+                "product_to_promote": recommended_product.get("product_name"),
+                "product_id": recommended_product.get("product_id"),
+                "sku": recommended_product.get("sku"),
+                "promotion_readiness_score": recommended_product.get("promotion_readiness_score"),
+                "recommended_channel": posting_time.get("best_channel"),
+                "recommended_posting_time": posting_time.get("recommended_window"),
+                "target_segment": target_segment.get("target_segment"),
+                "recommended_city": target_segment.get("recommended_city"),
+                "recommended_customer_type": target_segment.get("recommended_customer_type"),
             },
-            "campaign_performance": {
-                "top_channels": campaign_performance.get("top_channels", [])[:3],
-                "top_campaigns": campaign_performance.get("top_campaigns", [])[:3],
+            "supporting_signals": {
+                "sales_growth_score": recommended_product.get("sales_growth_score"),
+                "campaign_engagement_score": recommended_product.get("campaign_engagement_score"),
+                "margin_score": recommended_product.get("margin_score"),
+                "conversion_score": recommended_product.get("conversion_score"),
+                "risk_score": recommended_product.get("risk_score"),
+                "inventory_count": recommended_product.get("inventory_count"),
+                "refund_rate_percent": recommended_product.get("refund_rate_percent"),
             },
-            "promotion_scores": {
-                "recommended_product": promotion_scores.get("recommended_product"),
-                "avoid_products": promotion_scores.get("avoid_products", [])[:3],
-                "formula": promotion_scores.get("formula"),
-            },
-            "posting_time": posting_time,
-            "target_segment": target_segment,
+            "top_channels": campaign_performance.get("top_channels", [])[:3],
+            "avoid_products": promotion_scores.get("avoid_products", [])[:3],
             "generated_content": generated_content,
             "citations": citations[:8],
-            "fallback_memo": fallback,
+            "fallback_memo_style_reference": fallback,
         }
 
         return self.llm_service.generate_json(
@@ -137,7 +147,7 @@ Return JSON with this exact schema:
             "target_segment": target_segment.get("target_segment"),
             "recommended_city": target_segment.get("recommended_city"),
             "recommended_customer_type": target_segment.get("recommended_customer_type"),
-            "executive_summary": f"Promote {product_name} because it has the strongest combined signal across sales growth, campaign engagement, margin, conversion, and risk.",
+            "executive_summary": f"{product_name} is the best product to promote now because it combines strong growth, strong campaign engagement, healthy margin, and low risk.",
             "decision_reasoning": [
                 f"Sales growth score is {recommended_product.get('sales_growth_score')}.",
                 f"Campaign engagement score is {recommended_product.get('campaign_engagement_score')}.",
@@ -151,6 +161,11 @@ Return JSON with this exact schema:
                 "posting_window": time_window,
                 "audience": target_segment.get("target_segment"),
                 "message_angle": "everyday comfort, demand, and clean style",
+                "execution_steps": [
+                    "Run the primary post during the recommended time window.",
+                    "Use the generated content variants across Instagram, WhatsApp, and Email.",
+                    "Avoid low-scoring products until margin, refund, or inventory issues improve.",
+                ],
             },
             "suggested_content": generated_content.get("content_variants", {}),
             "risk_note": "Avoid low-scoring products with weak sales, low margin, high refund rate, low inventory, or poor campaign engagement.",

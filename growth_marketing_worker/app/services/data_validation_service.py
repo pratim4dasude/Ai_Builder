@@ -235,8 +235,14 @@ class GrowthDataValidationService:
         if invalid_sales_customers.any():
             errors.append(f"sales: invalid customer_id references -> {int(invalid_sales_customers.sum())}")
 
-        content_campaigns = content_df["campaign_id"].astype(str)
-        invalid_content_campaigns = ~content_campaigns.isin(campaign_ids) & (content_campaigns != "NA")
+        content_campaigns = content_df["campaign_id"].astype(str).str.strip()
+
+        allowed_missing_campaign_values = {"NA", "na", "N/A", "n/a"}
+
+        invalid_content_campaigns = (
+                ~content_campaigns.isin(campaign_ids)
+                & ~content_campaigns.isin(allowed_missing_campaign_values)
+        )
 
         if invalid_content_campaigns.any():
             errors.append(f"content_calendar: invalid campaign_id references -> {int(invalid_content_campaigns.sum())}")
