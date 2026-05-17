@@ -3,7 +3,7 @@ import pandas as pd
 from app.connectors.connector_manager import ConnectorManager
 from app.utils.period_parser import filter_by_date
 from app.ml.revenue_xgboost import RevenueXGBoostModel
-
+from app.utils.citation_builder import build_citation
 
 class RevenueForecastService:
     def __init__(self):
@@ -56,7 +56,7 @@ class RevenueForecastService:
             if len(orders) else pd.DataFrame(columns=["category", "net_amount"])
         )
 
-        xgb_forecast = RevenueXGBoostModel().train_and_forecast(
+        xgb_forecast = RevenueXGBoostModel().predict_next_days(
             orders=orders_all,
             horizon_days=7,
         )
@@ -72,7 +72,54 @@ class RevenueForecastService:
             "xgboost_forecast": xgb_forecast,
             "top_revenue_days": top_days.to_dict(orient="records"),
             "category_revenue": category_revenue.to_dict(orient="records"),
-            "citations": {
-                "source": "orders.csv",
-            },
+            "citations": build_citation(
+                source="orders.csv",
+                row_count=total_orders,
+                columns_used=[
+                    "order_id",
+                    "order_date",
+                    "net_amount",
+                    "category",
+                ],
+                period=period,
+                metric_sources={
+                    "total_revenue": {
+                        "source": "orders.csv",
+                        "column": "net_amount",
+                        "calculation": "sum(net_amount)",
+                    },
+                    "total_orders": {
+                        "source": "orders.csv",
+                        "column": "order_id",
+                        "calculation": "count(order_id)",
+                    },
+                    "avg_order_value": {
+                        "source": "orders.csv",
+                        "column": "net_amount",
+                        "calculation": "mean(net_amount)",
+                    },
+                    "top_revenue_days": {
+                        "source": "orders.csv",
+                        "columns": ["order_date", "net_amount"],
+                        "calculation": "group by order_date and sum(net_amount)",
+                    },
+                    "category_revenue": {
+                        "source": "orders.csv",
+                        "columns": ["category", "net_amount"],
+                        "calculation": "group by category and sum(net_amount)",
+                    },
+                    "xgboost_forecast": {
+                        "source": "orders.csv",
+                        "columns": [
+                            "order_date",
+                            "order_id",
+                            "net_amount",
+                        ],
+                        "model": "xgboost_regressor",
+                        "features": xgb_forecast.get("features_used", []),
+                        "model_path": xgb_forecast.get("model_path"),
+                        "metadata_path": xgb_forecast.get("metadata_path"),
+                    },
+                },
+            ),
         }
