@@ -20,37 +20,70 @@ class GrowthResponseFormatter:
                 "reason": self._build_risk_reason(product),
             })
 
+        answer = {
+            "decision": self._build_decision(state.query_intent, recommended_product),
+            "query_intent": state.query_intent,
+            "product_to_promote": recommended_product.get("product_name"),
+            "product_id": recommended_product.get("product_id"),
+            "sku": recommended_product.get("sku"),
+            "promotion_readiness_score": recommended_product.get("promotion_readiness_score"),
+            "recommended_channel": final_memo.get("recommended_channel") or posting_time.get("best_channel"),
+            "recommended_posting_time": final_memo.get("recommended_posting_time") or posting_time.get("recommended_window"),
+            "target_segment": target_segment.get("target_segment"),
+            "recommended_city": target_segment.get("recommended_city"),
+            "recommended_customer_type": target_segment.get("recommended_customer_type"),
+
+            "confidence": state.confidence,
+            "next_best_actions": state.next_best_actions,
+
+            "llm_used_for_content": generated_content.get("llm_used", False),
+            "llm_used_for_memo": final_memo.get("llm_used", False),
+            "executive_summary": final_memo.get("executive_summary"),
+            "campaign_plan": final_memo.get("campaign_plan"),
+            "content_strategy": generated_content.get("content_strategy"),
+            "execution_steps": (final_memo.get("campaign_plan") or {}).get("execution_steps", []),
+            "risk_note": final_memo.get("risk_note"),
+
+            "why": self._build_reasoning(recommended_product),
+            "recommended_action": final_memo.get("recommended_action"),
+            "suggested_content": generated_content.get("content_variants", {}),
+            "products_to_avoid": clean_risky_products,
+        }
+
         return {
             "worker": "Growth Marketing Worker",
             "query": state.user_query,
             "session_id": state.session_id,
             "selected_agents": state.selected_agents,
-            "answer": {
-                "decision": f"Promote {recommended_product.get('product_name')}",
-                "product_to_promote": recommended_product.get("product_name"),
-                "product_id": recommended_product.get("product_id"),
-                "sku": recommended_product.get("sku"),
-                "promotion_readiness_score": recommended_product.get("promotion_readiness_score"),
-                "recommended_channel": final_memo.get("recommended_channel") or posting_time.get("best_channel"),
-                "recommended_posting_time": final_memo.get("recommended_posting_time") or posting_time.get("recommended_window"),
-                "target_segment": target_segment.get("target_segment"),
-                "recommended_city": target_segment.get("recommended_city"),
-                "recommended_customer_type": target_segment.get("recommended_customer_type"),
-                "llm_used_for_content": generated_content.get("llm_used", False),
-                "llm_used_for_memo": final_memo.get("llm_used", False),
-                "executive_summary": final_memo.get("executive_summary"),
-                "campaign_plan": final_memo.get("campaign_plan"),
-                "risk_note": final_memo.get("risk_note"),
-                "why": self._build_reasoning(recommended_product),
-                "recommended_action": final_memo.get("recommended_action"),
-                "suggested_content": generated_content.get("content_variants", {}),
-                "products_to_avoid": clean_risky_products,
-            },
+            "answer": answer,
             "citations": self._dedupe_citations(state.citations),
         }
 
     def format_stream_completed_response(self, state):
         return self.format_chat_response(state)
+
+    def _build_decision(self, query_intent, recommended_product):
+        product_name = recommended_product.get("product_name")
+
+        if query_intent == "risk_analysis":
+            return "Review products to avoid before launching promotions"
+
+        if query_intent == "campaign_performance":
+            return "Review campaign and channel performance"
+
+        if query_intent == "posting_time":
+            return "Use the recommended posting time window"
+
+        if query_intent == "content_generation":
+            return f"Generate and use campaign content for {product_name}"
+
+        if query_intent == "segment_recommendation":
+            return f"Target the best segment for {product_name}"
+
+        if query_intent == "sales_trend":
+            return "Review current sales trend signals"
+
+        return f"Promote {product_name}"
 
     def _build_reasoning(self, product):
         reasons = []
