@@ -14,6 +14,8 @@ from app.services.posting_time_service import PostingTimeService
 from app.services.segment_service import SegmentService
 from app.services.content_generation_service import ContentGenerationService
 from app.services.memo_service import MemoService
+from app.services.confidence_service import ConfidenceService
+from app.services.action_plan_service import ActionPlanService
 
 
 class MultiAgentRouter:
@@ -33,6 +35,8 @@ class MultiAgentRouter:
         self.segment_service = SegmentService()
         self.content_service = ContentGenerationService()
         self.memo_service = MemoService()
+        self.confidence_service = ConfidenceService()
+        self.action_plan_service = ActionPlanService()
 
     def run_agent(self, agent_name: str, state: GrowthAgentState) -> GrowthAgentState:
         if agent_name == "sales_trend_agent":
@@ -72,6 +76,23 @@ class MultiAgentRouter:
                 recommended_product=recommended_product,
             )
 
+        elif agent_name == "risk_agent":
+            avoid_products = state.promotion_scores.get("avoid_products", [])
+
+            state.risk_analysis = {
+                "status": "success",
+                "risky_products": avoid_products[:10],
+                "risk_rules": [
+                    "Low or negative sales growth",
+                    "High refund rate",
+                    "Low margin",
+                    "Low inventory",
+                    "Inactive product",
+                    "Weak campaign engagement",
+                ],
+                "recommendation": "Avoid or pause products with high risk score before running promotion campaigns.",
+            }
+
         elif agent_name == "content_agent":
             recommended_product = state.promotion_scores.get("recommended_product", {})
 
@@ -93,21 +114,24 @@ class MultiAgentRouter:
                 generated_content=state.generated_content,
                 citations=state.citations,
             )
-        elif agent_name == "risk_agent":
-            avoid_products = state.promotion_scores.get("avoid_products", [])
 
-            state.risk_analysis = {
-                "status": "success",
-                "risky_products": avoid_products[:10],
-                "risk_rules": [
-                    "Low or negative sales growth",
-                    "High refund rate",
-                    "Low margin",
-                    "Low inventory",
-                    "Inactive product",
-                    "Weak campaign engagement",
-                ],
-                "recommendation": "Avoid or pause products with high risk score before running promotion campaigns.",
-            }
+            state.confidence = self.confidence_service.calculate_confidence(
+                sales_trends=state.sales_trends,
+                campaign_performance=state.campaign_performance,
+                promotion_scores=state.promotion_scores,
+                posting_time=state.posting_time,
+                target_segment=state.target_segment,
+                risk_analysis=state.risk_analysis,
+            )
+
+            state.next_best_actions = self.action_plan_service.generate_next_best_actions(
+                query_intent=state.query_intent,
+                promotion_scores=state.promotion_scores,
+                posting_time=state.posting_time,
+                target_segment=state.target_segment,
+                risk_analysis=state.risk_analysis,
+                generated_content=state.generated_content,
+                confidence=state.confidence,
+            )
 
         return state
