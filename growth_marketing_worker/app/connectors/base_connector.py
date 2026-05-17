@@ -11,4 +11,8 @@ class BaseCSVConnector(ABC):
         pass
 
     def _read_csv(self) -> pd.DataFrame:
-        return pd.read_csv(self.file_path)
+        return pd.read_csv(
+            self.file_path,
+            keep_default_na=False,
+            na_values=[],
+        )

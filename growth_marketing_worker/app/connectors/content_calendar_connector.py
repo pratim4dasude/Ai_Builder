@@ -11,6 +11,15 @@ class ContentCalendarConnector(BaseCSVConnector):
     def load_data(self) -> pd.DataFrame:
         df = self._read_csv()
 
+        df["campaign_id"] = df["campaign_id"].astype(str).replace(
+            {
+                "": "NA",
+                "nan": "NA",
+                "None": "NA",
+                "null": "NA",
+            }
+        )
+
         numeric_cols = [
             "engagements",
             "likes",
