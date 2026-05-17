@@ -18,7 +18,8 @@ class FinanceAgentState:
     statistics_analysis: Optional[Dict[str, Any]] = None
     business_insights: Optional[Dict[str, Any]] = None
     final_memo: Optional[str] = None
-
+    previous_context: Dict[str, Any] = field(default_factory=dict)
+    conversation_history: List[Dict[str, Any]] = field(default_factory=list)
     errors: List[str] = field(default_factory=list)
 
     metadata: Dict[str, Any] = field(default_factory=lambda: {
