@@ -1,0 +1,501 @@
+merchant_id,product_id,sku,product_name,category,subcategory,brand,price,cost_price,margin_percent,target_segment,customer_type,inventory_count,refund_rate_percent,rating,is_active,launch_date,source,source_row_id
+M001,PROD000001,SKU000001,Black Oversized T-Shirt,fashion,oversized_tshirt,UrbanThreads,899,404.55,55.0,college_students,Returning,320,2.5,4.8,true,2024-11-30,product_csv,PROD_ROW_001
+M001,PROD000002,SKU000002,Faded Printed Kurta,fashion,kurta,UrbanThreads,399,351.12,12.0,budget_buyers,New,7,17.5,2.7,true,2024-12-05,product_csv,PROD_ROW_002
+M001,PROD000003,SKU000003,Pink Minimalist Photo Frame,lifestyle,decor,UrbanThreads,628,454.69,27.6,family_buyers,Returning,215,6.09,3.0,true,2024-08-03,product_csv,PROD_ROW_003
+M001,PROD000004,SKU000004,Grey Printed Bedsheet,home,bedsheet,UrbanThreads,2319,842.78,63.66,family_buyers,New,145,3.65,4.4,true,2024-07-05,product_csv,PROD_ROW_004
+M001,PROD000005,SKU000005,Teal Crossbody Bag,accessories,handbag,UrbanThreads,4070,2649.17,34.91,working_women,High-Value,262,2.73,2.6,true,2023-04-23,product_csv,PROD_ROW_005
+M001,PROD000006,SKU000006,Brown Low Top Sneakers,footwear,sneakers,UrbanThreads,3441,2804.62,18.49,college_students,High-Value,249,11.05,4.9,true,2023-01-12,product_csv,PROD_ROW_006
+M001,PROD000007,SKU000007,Pink Linen Bedsheet,home,bedsheet,UrbanThreads,3774,2654.05,29.68,family_buyers,New,160,15.48,3.6,true,2023-09-27,product_csv,PROD_ROW_007
+M001,PROD000008,SKU000008,Green Scented Candle,lifestyle,decor,UrbanThreads,2960,2030.13,31.41,family_buyers,High-Value,111,3.9,4.4,true,2024-07-06,product_csv,PROD_ROW_008
+M001,PROD000009,SKU000009,Mustard Minimalist Photo Frame,lifestyle,decor,UrbanThreads,2400,2014.29,16.07,family_buyers,Returning,132,2.1,4.7,true,2023-03-22,product_csv,PROD_ROW_009
+M001,PROD000010,SKU000010,Maroon Slim Fit Denim Jacket,fashion,jacket,UrbanThreads,4614,2570.05,44.3,streetwear_lovers,New,347,10.03,3.9,true,2023-09-29,product_csv,PROD_ROW_010
+M001,PROD000011,SKU000011,Grey Wooden Desk Organiser,lifestyle,decor,UrbanThreads,1222,559.53,54.21,family_buyers,High-Value,342,8.09,4.7,true,2024-04-07,product_csv,PROD_ROW_011
+M001,PROD000012,SKU000012,Grey Slim Fit Jeans,fashion,denim_jeans,UrbanThreads,2383,1997.98,16.16,young_professionals,New,311,5.18,2.7,true,2024-10-08,product_csv,PROD_ROW_012
+M001,PROD000013,SKU000013,White Slim Fit Jeans,fashion,denim_jeans,UrbanThreads,2352,1907.54,18.9,young_professionals,Returning,352,10.22,3.8,true,2024-08-07,product_csv,PROD_ROW_013
+M001,PROD000014,SKU000014,Grey Boho Plant Pot,lifestyle,decor,UrbanThreads,2066,1539.74,25.47,family_buyers,High-Value,230,7.73,3.5,true,2023-02-25,product_csv,PROD_ROW_014
+M001,PROD000015,SKU000015,Black Printed Bedsheet,home,bedsheet,UrbanThreads,3681,2441.91,33.66,family_buyers,New,108,4.61,3.6,true,2024-03-08,product_csv,PROD_ROW_015
+M001,PROD000016,SKU000016,Blue Retro Runners,footwear,sneakers,UrbanThreads,4580,1567.29,65.78,college_students,High-Value,1,1.96,5.0,true,2023-01-16,product_csv,PROD_ROW_016
+M001,PROD000017,SKU000017,Navy Straight Cut Denim,fashion,denim_jeans,UrbanThreads,2988,1748.74,41.47,young_professionals,New,2,8.2,5.0,true,2023-09-29,product_csv,PROD_ROW_017
+M001,PROD000018,SKU000018,Red Night Repair Cream,beauty,skincare,UrbanThreads,2292,1753.06,23.51,working_women,New,39,12.0,3.9,true,2023-11-18,product_csv,PROD_ROW_018
+M001,PROD000019,SKU000019,Mustard Streetwear Oversized Top,fashion,oversized_tshirt,UrbanThreads,913,314.38,65.57,streetwear_lovers,New,0,19.25,2.7,true,2023-07-10,product_csv,PROD_ROW_019
+M001,PROD000020,SKU000020,Pink Breathable Linen Top,fashion,linen_shirt,UrbanThreads,1625,1274.1,21.59,young_professionals,High-Value,9,1.76,2.7,true,2024-11-04,product_csv,PROD_ROW_020
+M001,PROD000021,SKU000021,Teal Minimalist Photo Frame,lifestyle,decor,UrbanThreads,1235,594.84,51.83,family_buyers,New,145,8.52,4.2,true,2023-11-04,product_csv,PROD_ROW_021
+M001,PROD000022,SKU000022,Teal Vitamin C Serum,beauty,skincare,UrbanThreads,337,201.51,40.2,working_women,New,285,5.05,3.2,true,2023-12-24,product_csv,PROD_ROW_022
+M001,PROD000023,SKU000023,Beige Blue Relaxed Jeans,fashion,denim_jeans,UrbanThreads,1645,1001.8,39.1,young_professionals,High-Value,164,12.62,5.0,true,2024-10-31,product_csv,PROD_ROW_023
+M001,PROD000024,SKU000024,Pink Wooden Desk Organiser,lifestyle,decor,UrbanThreads,1625,548.49,66.25,family_buyers,New,145,3.19,2.8,true,2024-07-20,product_csv,PROD_ROW_024
+M001,PROD000025,SKU000025,Olive Slip-On Sneakers,footwear,sneakers,UrbanThreads,1861,847.34,54.47,college_students,High-Value,334,17.21,3.8,true,2023-09-15,product_csv,PROD_ROW_025
+M001,PROD000026,SKU000026,Pink Premium Linen Casual Shirt,fashion,linen_shirt,UrbanThreads,2497,1742.47,30.22,young_professionals,Returning,404,3.49,4.9,false,2023-06-15,product_csv,PROD_ROW_026
+M001,PROD000027,SKU000027,Green Printed Bedsheet,home,bedsheet,UrbanThreads,2996,2530.67,15.53,family_buyers,High-Value,472,3.83,2.6,false,2024-01-14,product_csv,PROD_ROW_027
+M001,PROD000028,SKU000028,Red Macrame Wall Hanging,lifestyle,decor,UrbanThreads,570,387.86,31.95,family_buyers,Returning,117,13.96,4.2,true,2023-12-29,product_csv,PROD_ROW_028
+M001,PROD000029,SKU000029,Mustard Macrame Wall Hanging,lifestyle,decor,UrbanThreads,1368,512.27,62.55,family_buyers,Returning,22,4.41,4.8,true,2024-02-26,product_csv,PROD_ROW_029
+M001,PROD000030,SKU000030,Olive Sateen Bedsheet,home,bedsheet,UrbanThreads,3924,1821.9,53.57,family_buyers,New,449,9.94,3.0,true,2024-04-16,product_csv,PROD_ROW_030
+M001,PROD000031,SKU000031,Maroon Sling Bag,accessories,handbag,UrbanThreads,2625,2197.08,16.3,working_women,Returning,178,6.29,2.7,true,2023-10-13,product_csv,PROD_ROW_031
+M001,PROD000032,SKU000032,Pink Crossbody Bag,accessories,handbag,UrbanThreads,3511,1170.64,66.66,working_women,Returning,101,12.03,5.0,true,2023-02-09,product_csv,PROD_ROW_032
+M001,PROD000033,SKU000033,Beige Comfort Joggers,fashion,joggers,UrbanThreads,1492,770.75,48.34,fitness_lifestyle,New,207,18.09,3.0,true,2023-02-15,product_csv,PROD_ROW_033
+M001,PROD000034,SKU000034,Black Linen Bedsheet,home,bedsheet,UrbanThreads,2904,1371.35,52.78,family_buyers,Returning,230,2.33,4.2,true,2023-12-05,product_csv,PROD_ROW_034
+M001,PROD000035,SKU000035,Pink Scented Candle,lifestyle,decor,UrbanThreads,1629,930.29,42.89,family_buyers,Returning,216,14.25,3.9,true,2023-07-16,product_csv,PROD_ROW_035
+M001,PROD000036,SKU000036,Pink Moisturising Cream,beauty,skincare,UrbanThreads,2820,1514.32,46.3,working_women,High-Value,436,1.01,3.2,true,2024-03-16,product_csv,PROD_ROW_036
+M001,PROD000037,SKU000037,Blue Boho Plant Pot,lifestyle,decor,UrbanThreads,2210,1057.28,52.16,family_buyers,Returning,416,18.12,4.5,true,2023-06-23,product_csv,PROD_ROW_037
+M001,PROD000038,SKU000038,Olive Linen Bedsheet,home,bedsheet,UrbanThreads,3418,1715.43,49.81,family_buyers,New,429,19.09,3.1,true,2023-11-14,product_csv,PROD_ROW_038
+M001,PROD000039,SKU000039,Navy Minimal White Sneakers,footwear,sneakers,UrbanThreads,1188,849.82,28.47,college_students,High-Value,445,15.6,3.6,false,2024-10-06,product_csv,PROD_ROW_039
+M001,PROD000040,SKU000040,Orange Boho Plant Pot,lifestyle,decor,UrbanThreads,2423,1526.95,36.98,family_buyers,High-Value,362,1.11,4.4,true,2023-04-20,product_csv,PROD_ROW_040
+M001,PROD000041,SKU000041,Navy Sport Deodorant,beauty,perfume,UrbanThreads,4404,3621.76,17.76,premium_buyers,New,243,3.53,3.7,true,2024-06-27,product_csv,PROD_ROW_041
+M001,PROD000042,SKU000042,Brown Boho Plant Pot,lifestyle,decor,UrbanThreads,2908,1168.28,59.83,family_buyers,Returning,435,18.23,3.6,true,2023-06-12,product_csv,PROD_ROW_042
+M001,PROD000043,SKU000043,Blue Microfibre Bedcover,home,bedsheet,UrbanThreads,3778,2697.56,28.6,family_buyers,High-Value,258,12.91,3.2,true,2023-03-21,product_csv,PROD_ROW_043
+M001,PROD000044,SKU000044,Grey Microfibre Bedcover,home,bedsheet,UrbanThreads,2074,1398.21,32.58,family_buyers,New,80,3.87,3.5,false,2023-06-06,product_csv,PROD_ROW_044
+M001,PROD000045,SKU000045,White Printed Bedsheet,home,bedsheet,UrbanThreads,2368,1581.86,33.2,family_buyers,Returning,41,4.93,3.6,true,2024-08-21,product_csv,PROD_ROW_045
+M001,PROD000046,SKU000046,Maroon Linen Bedsheet,home,bedsheet,UrbanThreads,2257,1326.35,41.23,family_buyers,Returning,395,8.41,4.7,true,2024-03-05,product_csv,PROD_ROW_046
+M001,PROD000047,SKU000047,Blue Macrame Wall Hanging,lifestyle,decor,UrbanThreads,1516,925.2,38.97,family_buyers,Returning,182,13.71,4.5,true,2023-06-19,product_csv,PROD_ROW_047
+M001,PROD000048,SKU000048,Mustard Sport Deodorant,beauty,perfume,UrbanThreads,819,287.62,64.88,premium_buyers,New,6,3.58,3.7,true,2023-02-21,product_csv,PROD_ROW_048
+M001,PROD000049,SKU000049,Beige Sling Bag,accessories,handbag,UrbanThreads,4523,3031.47,32.98,working_women,Returning,395,19.07,3.6,true,2023-03-25,product_csv,PROD_ROW_049
+M001,PROD000050,SKU000050,Orange Sport Deodorant,beauty,perfume,UrbanThreads,1025,307.55,70.0,premium_buyers,New,342,2.3,4.9,true,2023-02-11,product_csv,PROD_ROW_050
+M001,PROD000051,SKU000051,Grey Slim Fit Jeans,fashion,denim_jeans,UrbanThreads,3543,2714.61,23.38,young_professionals,Returning,1,16.51,3.0,true,2024-12-17,product_csv,PROD_ROW_051
+M001,PROD000052,SKU000052,Navy Crossbody Bag,accessories,handbag,UrbanThreads,1737,733.39,57.78,working_women,Returning,65,12.0,4.8,true,2024-08-12,product_csv,PROD_ROW_052
+M001,PROD000053,SKU000053,Red Sateen Bedsheet,home,bedsheet,UrbanThreads,1010,529.59,47.57,family_buyers,New,366,18.18,4.6,true,2024-09-06,product_csv,PROD_ROW_053
+M001,PROD000054,SKU000054,Beige Drop Shoulder Tee,fashion,oversized_tshirt,UrbanThreads,837,406.92,51.38,streetwear_lovers,High-Value,341,7.48,4.6,true,2024-05-16,product_csv,PROD_ROW_054
+M001,PROD000055,SKU000055,Beige Active Joggers,fashion,joggers,UrbanThreads,912,556.76,38.95,fitness_lifestyle,High-Value,148,12.7,4.8,true,2024-05-10,product_csv,PROD_ROW_055
+M001,PROD000056,SKU000056,Maroon Night Repair Cream,beauty,skincare,UrbanThreads,1398,940.48,32.73,working_women,New,4,19.05,3.1,true,2024-04-20,product_csv,PROD_ROW_056
+M001,PROD000057,SKU000057,Beige Scented Candle,lifestyle,decor,UrbanThreads,2423,925.53,61.8,family_buyers,Returning,118,7.74,3.1,true,2023-10-14,product_csv,PROD_ROW_057
+M001,PROD000058,SKU000058,Green Scented Candle,lifestyle,decor,UrbanThreads,2515,826.34,67.14,family_buyers,New,378,8.72,3.9,true,2023-09-04,product_csv,PROD_ROW_058
+M001,PROD000059,SKU000059,Pink Printed Bedsheet,home,bedsheet,UrbanThreads,2534,1048.79,58.61,family_buyers,Returning,123,8.68,3.1,true,2024-11-10,product_csv,PROD_ROW_059
+M001,PROD000060,SKU000060,Blue Wooden Desk Organiser,lifestyle,decor,UrbanThreads,2573,1700.58,33.91,family_buyers,Returning,190,14.35,3.2,true,2023-09-15,product_csv,PROD_ROW_060
+M001,PROD000061,SKU000061,Orange Retro Runners,footwear,sneakers,UrbanThreads,2291,1796.71,21.58,college_students,High-Value,2,4.64,4.3,true,2023-10-11,product_csv,PROD_ROW_061
+M001,PROD000062,SKU000062,White Sateen Bedsheet,home,bedsheet,UrbanThreads,1912,1385.98,27.51,family_buyers,Returning,17,14.45,2.8,true,2023-02-16,product_csv,PROD_ROW_062
+M001,PROD000063,SKU000063,Olive Floral Midi Dress,fashion,dress,UrbanThreads,2809,2229.16,20.64,working_women,High-Value,155,9.92,3.6,true,2023-07-08,product_csv,PROD_ROW_063
+M001,PROD000064,SKU000064,Maroon Essential Polo Shirt,fashion,polo_tshirt,UrbanThreads,732,291.22,60.22,young_professionals,Returning,47,11.96,4.2,true,2023-06-05,product_csv,PROD_ROW_064
+M001,PROD000065,SKU000065,White Retro Runners,footwear,sneakers,UrbanThreads,1484,805.9,45.69,college_students,High-Value,315,16.02,3.1,true,2024-06-19,product_csv,PROD_ROW_065
+M001,PROD000066,SKU000066,Teal Face Wash Gel,beauty,skincare,UrbanThreads,1516,571.39,62.31,working_women,Returning,301,12.8,4.0,true,2023-04-12,product_csv,PROD_ROW_066
+M001,PROD000067,SKU000067,Olive Minimal White Sneakers,footwear,sneakers,UrbanThreads,1642,1179.08,28.19,college_students,New,90,1.05,3.6,false,2024-08-31,product_csv,PROD_ROW_067
+M001,PROD000068,SKU000068,Black Moisturising Cream,beauty,skincare,UrbanThreads,1479,682.08,53.88,working_women,New,361,5.44,3.2,true,2024-10-02,product_csv,PROD_ROW_068
+M001,PROD000069,SKU000069,Red Scented Candle,lifestyle,decor,UrbanThreads,2629,1909.59,27.36,family_buyers,Returning,433,3.7,2.6,true,2023-11-11,product_csv,PROD_ROW_069
+M001,PROD000070,SKU000070,Blue Scented Candle,lifestyle,decor,UrbanThreads,2318,1092.3,52.88,family_buyers,Returning,266,11.26,3.6,true,2024-09-04,product_csv,PROD_ROW_070
+M001,PROD000071,SKU000071,Orange Comfort Joggers,fashion,joggers,UrbanThreads,1835,1307.07,28.77,fitness_lifestyle,New,355,16.88,3.9,true,2023-01-22,product_csv,PROD_ROW_071
+M001,PROD000072,SKU000072,Mustard Cotton King Bedsheet,home,bedsheet,UrbanThreads,3824,1659.82,56.59,family_buyers,High-Value,343,9.4,3.2,true,2024-08-22,product_csv,PROD_ROW_072
+M001,PROD000073,SKU000073,White Face Wash Gel,beauty,skincare,UrbanThreads,1724,1078.2,37.46,working_women,High-Value,63,17.3,3.3,true,2024-12-11,product_csv,PROD_ROW_073
+M001,PROD000074,SKU000074,Pink Face Wash Gel,beauty,skincare,UrbanThreads,2552,2117.69,17.02,working_women,Returning,139,7.14,4.9,true,2024-02-18,product_csv,PROD_ROW_074
+M001,PROD000075,SKU000075,Pink Wooden Desk Organiser,lifestyle,decor,UrbanThreads,2291,1426.64,37.73,family_buyers,High-Value,5,12.83,3.7,true,2024-03-28,product_csv,PROD_ROW_075
+M001,PROD000076,SKU000076,Olive Stretch Denim Jeans,fashion,denim_jeans,UrbanThreads,1535,521.56,66.02,young_professionals,High-Value,258,3.31,4.9,true,2024-09-15,product_csv,PROD_ROW_076
+M001,PROD000077,SKU000077,Olive Slip-On Sneakers,footwear,sneakers,UrbanThreads,1055,576.31,45.37,college_students,New,440,18.35,3.7,true,2023-05-01,product_csv,PROD_ROW_077
+M001,PROD000078,SKU000078,Blue Microfibre Bedcover,home,bedsheet,UrbanThreads,2783,1285.81,53.8,family_buyers,Returning,251,5.63,3.9,true,2024-01-28,product_csv,PROD_ROW_078
+M001,PROD000079,SKU000079,Maroon Minimal White Sneakers,footwear,sneakers,UrbanThreads,2130,905.31,57.5,college_students,Returning,488,15.97,3.2,true,2023-01-03,product_csv,PROD_ROW_079
+M001,PROD000080,SKU000080,Maroon Crossbody Bag,accessories,handbag,UrbanThreads,4810,1799.45,62.59,working_women,High-Value,257,7.56,3.9,true,2024-07-10,product_csv,PROD_ROW_080
+M001,PROD000081,SKU000081,Teal Sunscreen SPF50,beauty,skincare,UrbanThreads,1071,332.62,68.94,working_women,High-Value,206,5.44,4.4,true,2023-02-14,product_csv,PROD_ROW_081
+M001,PROD000082,SKU000082,Orange Backpack,accessories,handbag,UrbanThreads,3961,1213.54,69.36,working_women,Returning,28,3.4,4.9,true,2023-12-06,product_csv,PROD_ROW_082
+M001,PROD000083,SKU000083,White Puffer Jacket,fashion,jacket,UrbanThreads,3370,2836.05,15.84,streetwear_lovers,Returning,455,17.24,2.9,true,2024-04-25,product_csv,PROD_ROW_083
+M001,PROD000084,SKU000084,Mustard Backpack,accessories,handbag,UrbanThreads,1456,555.51,61.85,working_women,Returning,498,7.02,4.3,true,2024-05-14,product_csv,PROD_ROW_084
+M001,PROD000085,SKU000085,Mustard Scented Candle,lifestyle,decor,UrbanThreads,1360,683.89,49.71,family_buyers,New,392,12.72,4.9,true,2024-10-10,product_csv,PROD_ROW_085
+M001,PROD000086,SKU000086,Blue Sateen Bedsheet,home,bedsheet,UrbanThreads,3541,2426.62,31.47,family_buyers,New,176,16.13,3.2,true,2024-01-19,product_csv,PROD_ROW_086
+M001,PROD000087,SKU000087,Grey Sport Deodorant,beauty,perfume,UrbanThreads,3974,2140.95,46.13,premium_buyers,New,99,2.5,4.7,true,2024-09-26,product_csv,PROD_ROW_087
+M001,PROD000088,SKU000088,Blue Linen Bedsheet,home,bedsheet,UrbanThreads,1285,928.15,27.77,family_buyers,Returning,140,13.67,4.7,true,2024-04-21,product_csv,PROD_ROW_088
+M001,PROD000089,SKU000089,White Reversible Belt,accessories,belt,UrbanThreads,1106,339.31,69.32,premium_buyers,High-Value,227,14.12,3.6,true,2023-11-06,product_csv,PROD_ROW_089
+M001,PROD000090,SKU000090,Maroon Low Top Sneakers,footwear,sneakers,UrbanThreads,1435,1032.54,28.05,college_students,High-Value,161,19.86,3.2,true,2024-11-05,product_csv,PROD_ROW_090
+M001,PROD000091,SKU000091,Black Night Repair Cream,beauty,skincare,UrbanThreads,499,174.23,65.08,working_women,Returning,407,16.18,4.0,true,2023-12-27,product_csv,PROD_ROW_091
+M001,PROD000092,SKU000092,Mustard Canvas Sneakers,footwear,sneakers,UrbanThreads,3775,1639.98,56.56,college_students,High-Value,59,18.16,4.1,true,2023-11-13,product_csv,PROD_ROW_092
+M001,PROD000093,SKU000093,Mustard Oud Perfume,beauty,perfume,UrbanThreads,1675,1340.71,19.96,premium_buyers,Returning,392,8.89,3.0,true,2024-07-06,product_csv,PROD_ROW_093
+M001,PROD000094,SKU000094,Maroon Sling Bag,accessories,handbag,UrbanThreads,2904,1008.48,65.27,working_women,Returning,392,17.54,4.5,true,2024-04-24,product_csv,PROD_ROW_094
+M001,PROD000095,SKU000095,Brown Zip Hoodie,fashion,hoodie,UrbanThreads,2626,835.07,68.2,college_students,Returning,56,16.02,2.5,true,2024-07-03,product_csv,PROD_ROW_095
+M001,PROD000096,SKU000096,Beige Windbreaker Jacket,fashion,jacket,UrbanThreads,3893,2493.22,35.96,streetwear_lovers,New,355,5.44,2.6,true,2024-07-28,product_csv,PROD_ROW_096
+M001,PROD000097,SKU000097,Pink Premium Leather Belt,accessories,belt,UrbanThreads,1700,674.7,60.31,premium_buyers,High-Value,219,3.22,2.6,true,2023-02-08,product_csv,PROD_ROW_097
+M001,PROD000098,SKU000098,White Tote Bag,accessories,handbag,UrbanThreads,2722,985.38,63.8,working_women,Returning,242,8.05,4.9,true,2024-12-14,product_csv,PROD_ROW_098
+M001,PROD000099,SKU000099,Mustard Macrame Wall Hanging,lifestyle,decor,UrbanThreads,2098,1027.59,51.02,family_buyers,High-Value,218,18.84,3.2,true,2024-12-07,product_csv,PROD_ROW_099
+M001,PROD000100,SKU000100,Blue Reversible Belt,accessories,belt,UrbanThreads,882,334.72,62.05,premium_buyers,High-Value,198,11.34,4.9,true,2024-01-03,product_csv,PROD_ROW_100
+M001,PROD000101,SKU000101,Olive Slim Joggers,fashion,joggers,UrbanThreads,849,278.51,67.2,fitness_lifestyle,New,349,5.03,4.1,true,2023-01-22,product_csv,PROD_ROW_101
+M001,PROD000102,SKU000102,Grey Printed Cotton Kurta,fashion,kurta,UrbanThreads,2911,2145.81,26.29,working_women,New,310,5.1,4.7,false,2023-12-03,product_csv,PROD_ROW_102
+M001,PROD000103,SKU000103,Olive Retro Runners,footwear,sneakers,UrbanThreads,1531,846.46,44.71,college_students,New,348,17.46,2.8,true,2024-01-02,product_csv,PROD_ROW_103
+M001,PROD000104,SKU000104,Black Retro Runners,footwear,sneakers,UrbanThreads,2085,1712.16,17.88,college_students,High-Value,68,15.17,3.7,true,2024-01-06,product_csv,PROD_ROW_104
+M001,PROD000105,SKU000105,Blue Wooden Desk Organiser,lifestyle,decor,UrbanThreads,1306,431.01,67.0,family_buyers,High-Value,8,6.73,4.1,true,2023-02-01,product_csv,PROD_ROW_105
+M001,PROD000106,SKU000106,Maroon Utility Jacket,fashion,jacket,UrbanThreads,3245,1533.74,52.74,streetwear_lovers,High-Value,475,9.43,4.7,true,2023-11-26,product_csv,PROD_ROW_106
+M001,PROD000107,SKU000107,White Macrame Wall Hanging,lifestyle,decor,UrbanThreads,1525,772.6,49.34,family_buyers,High-Value,176,8.24,4.0,true,2023-10-29,product_csv,PROD_ROW_107
+M001,PROD000108,SKU000108,White Vitamin C Serum,beauty,skincare,UrbanThreads,2980,1466.15,50.8,working_women,High-Value,453,5.09,3.6,true,2023-08-22,product_csv,PROD_ROW_108
+M001,PROD000109,SKU000109,Maroon Face Wash Gel,beauty,skincare,UrbanThreads,1932,1200.17,37.88,working_women,Returning,228,6.94,3.1,true,2023-06-06,product_csv,PROD_ROW_109
+M001,PROD000110,SKU000110,White Cotton King Bedsheet,home,bedsheet,UrbanThreads,1048,837.06,20.13,family_buyers,High-Value,388,8.08,2.8,true,2023-03-03,product_csv,PROD_ROW_110
+M001,PROD000111,SKU000111,Pink Scented Candle,lifestyle,decor,UrbanThreads,2081,1364.14,34.45,family_buyers,High-Value,36,19.4,4.0,true,2023-12-27,product_csv,PROD_ROW_111
+M001,PROD000112,SKU000112,Grey Floral Midi Dress,fashion,dress,UrbanThreads,2774,2015.77,27.33,working_women,Returning,442,11.57,2.8,true,2023-10-13,product_csv,PROD_ROW_112
+M001,PROD000113,SKU000113,Brown Boho Plant Pot,lifestyle,decor,UrbanThreads,2696,846.54,68.6,family_buyers,New,321,18.65,4.6,true,2023-10-01,product_csv,PROD_ROW_113
+M001,PROD000114,SKU000114,Olive Fleece Hoodie,fashion,hoodie,UrbanThreads,2390,1570.08,34.31,college_students,New,299,17.26,2.7,true,2024-10-10,product_csv,PROD_ROW_114
+M001,PROD000115,SKU000115,Orange Relaxed Linen Shirt,fashion,linen_shirt,UrbanThreads,1239,796.79,35.69,young_professionals,Returning,2,8.03,4.3,true,2024-08-04,product_csv,PROD_ROW_115
+M001,PROD000116,SKU000116,Teal Scented Candle,lifestyle,decor,UrbanThreads,1036,790.91,23.66,family_buyers,High-Value,51,14.18,4.2,true,2024-05-12,product_csv,PROD_ROW_116
+M001,PROD000117,SKU000117,Red Minimalist Photo Frame,lifestyle,decor,UrbanThreads,1281,556.95,56.52,family_buyers,Returning,230,3.11,4.2,true,2024-08-30,product_csv,PROD_ROW_117
+M001,PROD000118,SKU000118,Black Moisturising Cream,beauty,skincare,UrbanThreads,1917,591.5,69.14,working_women,New,3,6.73,3.0,true,2023-05-21,product_csv,PROD_ROW_118
+M001,PROD000119,SKU000119,Beige Tote Bag,accessories,handbag,UrbanThreads,862,496.89,42.36,working_women,New,76,8.22,4.3,true,2024-05-27,product_csv,PROD_ROW_119
+M001,PROD000120,SKU000120,White Boho Plant Pot,lifestyle,decor,UrbanThreads,572,348.97,38.99,family_buyers,New,451,6.95,3.6,false,2024-02-19,product_csv,PROD_ROW_120
+M001,PROD000121,SKU000121,Olive Cotton King Bedsheet,home,bedsheet,UrbanThreads,2358,1977.25,16.15,family_buyers,New,420,19.0,3.7,true,2024-12-07,product_csv,PROD_ROW_121
+M001,PROD000122,SKU000122,Red Premium Leather Belt,accessories,belt,UrbanThreads,897,547.51,38.96,premium_buyers,High-Value,50,8.52,3.3,true,2023-12-14,product_csv,PROD_ROW_122
+M001,PROD000123,SKU000123,Brown Retro Runners,footwear,sneakers,UrbanThreads,1311,746.27,43.08,college_students,High-Value,8,4.68,4.4,false,2023-12-26,product_csv,PROD_ROW_123
+M001,PROD000124,SKU000124,Grey Cotton King Bedsheet,home,bedsheet,UrbanThreads,1298,920.56,29.08,family_buyers,High-Value,88,15.44,4.1,true,2023-07-01,product_csv,PROD_ROW_124
+M001,PROD000125,SKU000125,Blue Linen Bedsheet,home,bedsheet,UrbanThreads,3811,2024.76,46.87,family_buyers,High-Value,171,3.87,2.7,true,2024-03-28,product_csv,PROD_ROW_125
+M001,PROD000126,SKU000126,Brown Microfibre Bedcover,home,bedsheet,UrbanThreads,3121,2556.43,18.09,family_buyers,New,168,9.77,2.6,true,2024-01-13,product_csv,PROD_ROW_126
+M001,PROD000127,SKU000127,Pink Premium Leather Belt,accessories,belt,UrbanThreads,1658,867.56,47.67,premium_buyers,Returning,307,11.53,4.5,true,2023-02-12,product_csv,PROD_ROW_127
+M001,PROD000128,SKU000128,Beige Sport Deodorant,beauty,perfume,UrbanThreads,4495,2581.24,42.58,premium_buyers,Returning,62,16.41,4.6,true,2023-03-28,product_csv,PROD_ROW_128
+M001,PROD000129,SKU000129,Black Macrame Wall Hanging,lifestyle,decor,UrbanThreads,2192,668.47,69.5,family_buyers,High-Value,9,4.02,3.4,true,2023-10-17,product_csv,PROD_ROW_129
+M001,PROD000130,SKU000130,Brown Sunscreen SPF50,beauty,skincare,UrbanThreads,2747,2255.83,17.88,working_women,New,178,2.8,4.2,true,2023-10-18,product_csv,PROD_ROW_130
+M001,PROD000131,SKU000131,Beige Premium Leather Belt,accessories,belt,UrbanThreads,1592,772.14,51.5,premium_buyers,Returning,345,14.27,3.5,true,2024-09-01,product_csv,PROD_ROW_131
+M001,PROD000132,SKU000132,Olive Linen Bedsheet,home,bedsheet,UrbanThreads,2241,1111.71,50.39,family_buyers,New,353,14.35,4.9,true,2024-12-02,product_csv,PROD_ROW_132
+M001,PROD000133,SKU000133,Pink Boho Plant Pot,lifestyle,decor,UrbanThreads,2481,1615.12,34.9,family_buyers,Returning,102,19.07,3.4,true,2024-05-12,product_csv,PROD_ROW_133
+M001,PROD000134,SKU000134,Navy Retro Runners,footwear,sneakers,UrbanThreads,1315,903.82,31.27,college_students,High-Value,404,11.26,4.3,true,2024-06-23,product_csv,PROD_ROW_134
+M001,PROD000135,SKU000135,Teal Block Print Kurta,fashion,kurta,UrbanThreads,1135,591.92,47.85,working_women,New,102,16.8,4.4,true,2023-06-19,product_csv,PROD_ROW_135
+M001,PROD000136,SKU000136,Black Printed Bedsheet,home,bedsheet,UrbanThreads,2191,1047.3,52.2,family_buyers,Returning,322,6.41,4.4,true,2024-04-04,product_csv,PROD_ROW_136
+M001,PROD000137,SKU000137,Olive Low Top Sneakers,footwear,sneakers,UrbanThreads,4701,1836.62,60.93,college_students,High-Value,494,11.84,3.6,true,2023-10-16,product_csv,PROD_ROW_137
+M001,PROD000138,SKU000138,Navy Moisturising Cream,beauty,skincare,UrbanThreads,2775,2147.52,22.61,working_women,New,338,10.13,3.4,true,2023-04-16,product_csv,PROD_ROW_138
+M001,PROD000139,SKU000139,Olive Cotton King Bedsheet,home,bedsheet,UrbanThreads,3824,2913.23,23.82,family_buyers,High-Value,85,16.79,2.7,false,2023-08-16,product_csv,PROD_ROW_139
+M001,PROD000140,SKU000140,Teal Vitamin C Serum,beauty,skincare,UrbanThreads,1998,1639.78,17.93,working_women,Returning,130,8.34,2.7,true,2023-08-18,product_csv,PROD_ROW_140
+M001,PROD000141,SKU000141,Teal Festive Kurta,fashion,kurta,UrbanThreads,1972,817.87,58.53,working_women,New,156,18.43,3.7,true,2023-05-23,product_csv,PROD_ROW_141
+M001,PROD000142,SKU000142,Blue Linen Bedsheet,home,bedsheet,UrbanThreads,720,253.28,64.82,family_buyers,Returning,120,16.86,3.9,true,2024-09-15,product_csv,PROD_ROW_142
+M001,PROD000143,SKU000143,White Minimalist Photo Frame,lifestyle,decor,UrbanThreads,1372,938.95,31.56,family_buyers,New,224,13.14,4.1,true,2023-03-06,product_csv,PROD_ROW_143
+M001,PROD000144,SKU000144,Mustard Puffer Jacket,fashion,jacket,UrbanThreads,1566,786.8,49.76,streetwear_lovers,High-Value,2,6.53,2.5,true,2023-12-28,product_csv,PROD_ROW_144
+M001,PROD000145,SKU000145,Navy Minimal White Sneakers,footwear,sneakers,UrbanThreads,3143,986.71,68.61,college_students,High-Value,288,10.64,5.0,true,2024-07-21,product_csv,PROD_ROW_145
+M001,PROD000146,SKU000146,Maroon Active Joggers,fashion,joggers,UrbanThreads,688,344.26,49.96,fitness_lifestyle,Returning,392,12.13,4.5,true,2023-12-20,product_csv,PROD_ROW_146
+M001,PROD000147,SKU000147,Brown Slip-On Sneakers,footwear,sneakers,UrbanThreads,4010,1739.64,56.62,college_students,New,190,11.37,4.5,true,2023-06-29,product_csv,PROD_ROW_147
+M001,PROD000148,SKU000148,Orange Printed Bedsheet,home,bedsheet,UrbanThreads,3286,2463.67,25.03,family_buyers,New,376,15.75,3.6,true,2023-10-28,product_csv,PROD_ROW_148
+M001,PROD000149,SKU000149,Brown Retro Runners,footwear,sneakers,UrbanThreads,4627,3826.31,17.3,college_students,High-Value,213,19.79,3.9,true,2023-09-17,product_csv,PROD_ROW_149
+M001,PROD000150,SKU000150,Olive Blue Relaxed Jeans,fashion,denim_jeans,UrbanThreads,1194,446.33,62.62,young_professionals,Returning,73,16.19,3.6,true,2024-02-14,product_csv,PROD_ROW_150
+M001,PROD000151,SKU000151,Teal Printed Bedsheet,home,bedsheet,UrbanThreads,2087,656.26,68.55,family_buyers,High-Value,264,7.98,4.5,true,2023-10-01,product_csv,PROD_ROW_151
+M001,PROD000152,SKU000152,White Active Joggers,fashion,joggers,UrbanThreads,1832,554.54,69.73,fitness_lifestyle,High-Value,160,7.1,2.7,false,2024-11-07,product_csv,PROD_ROW_152
+M001,PROD000153,SKU000153,Blue Crossbody Bag,accessories,handbag,UrbanThreads,4289,3252.54,24.17,working_women,Returning,238,1.8,4.7,true,2023-12-28,product_csv,PROD_ROW_153
+M001,PROD000154,SKU000154,Olive Scented Candle,lifestyle,decor,UrbanThreads,706,339.48,51.92,family_buyers,Returning,272,16.22,4.2,false,2023-02-01,product_csv,PROD_ROW_154
+M001,PROD000155,SKU000155,Black Retro Runners,footwear,sneakers,UrbanThreads,1274,917.54,27.98,college_students,Returning,206,19.04,2.6,true,2023-06-07,product_csv,PROD_ROW_155
+M001,PROD000156,SKU000156,Beige Microfibre Bedcover,home,bedsheet,UrbanThreads,2517,1083.07,56.97,family_buyers,High-Value,197,8.56,4.1,true,2023-09-13,product_csv,PROD_ROW_156
+M001,PROD000157,SKU000157,Orange Graphic Oversized Tee,fashion,oversized_tshirt,UrbanThreads,910,514.37,43.48,streetwear_lovers,New,144,15.72,4.3,true,2023-08-08,product_csv,PROD_ROW_157
+M001,PROD000158,SKU000158,Orange Boho Plant Pot,lifestyle,decor,UrbanThreads,1218,953.15,21.74,family_buyers,Returning,98,18.07,3.6,true,2023-03-31,product_csv,PROD_ROW_158
+M001,PROD000159,SKU000159,Pink Microfibre Bedcover,home,bedsheet,UrbanThreads,3605,2935.49,18.57,family_buyers,Returning,466,6.7,2.9,true,2024-12-27,product_csv,PROD_ROW_159
+M001,PROD000160,SKU000160,Brown Microfibre Bedcover,home,bedsheet,UrbanThreads,2782,2021.59,27.33,family_buyers,New,131,16.02,2.6,true,2024-07-21,product_csv,PROD_ROW_160
+M001,PROD000161,SKU000161,Blue Wooden Desk Organiser,lifestyle,decor,UrbanThreads,930,477.49,48.66,family_buyers,New,168,8.57,4.3,true,2024-05-05,product_csv,PROD_ROW_161
+M001,PROD000162,SKU000162,Brown Boho Plant Pot,lifestyle,decor,UrbanThreads,2753,2228.38,19.06,family_buyers,High-Value,47,9.55,4.2,true,2023-12-19,product_csv,PROD_ROW_162
+M001,PROD000163,SKU000163,Brown Retro Runners,footwear,sneakers,UrbanThreads,2771,1588.96,42.66,college_students,New,275,3.91,2.9,true,2023-11-27,product_csv,PROD_ROW_163
+M001,PROD000164,SKU000164,Beige Linen Bedsheet,home,bedsheet,UrbanThreads,1862,716.38,61.53,family_buyers,New,335,19.17,3.2,true,2024-10-02,product_csv,PROD_ROW_164
+M001,PROD000165,SKU000165,Green Braided Belt,accessories,belt,UrbanThreads,1611,535.04,66.79,premium_buyers,New,347,12.87,4.8,true,2023-12-12,product_csv,PROD_ROW_165
+M001,PROD000166,SKU000166,Maroon Scented Candle,lifestyle,decor,UrbanThreads,731,603.07,17.5,family_buyers,High-Value,117,15.57,3.5,true,2024-10-16,product_csv,PROD_ROW_166
+M001,PROD000167,SKU000167,Teal Puffer Jacket,fashion,jacket,UrbanThreads,2685,1334.31,50.31,streetwear_lovers,Returning,135,16.29,4.2,true,2023-11-01,product_csv,PROD_ROW_167
+M001,PROD000168,SKU000168,Orange Woody Eau de Parfum,beauty,perfume,UrbanThreads,1893,1151.35,39.18,premium_buyers,Returning,114,7.46,2.9,true,2023-11-23,product_csv,PROD_ROW_168
+M001,PROD000169,SKU000169,Red Sateen Bedsheet,home,bedsheet,UrbanThreads,3814,2464.62,35.38,family_buyers,New,173,5.59,2.8,true,2024-04-05,product_csv,PROD_ROW_169
+M001,PROD000170,SKU000170,White Minimal White Sneakers,footwear,sneakers,UrbanThreads,2187,721.79,67.0,college_students,New,453,18.14,4.5,true,2024-08-14,product_csv,PROD_ROW_170
+M001,PROD000171,SKU000171,Grey Sateen Bedsheet,home,bedsheet,UrbanThreads,2739,827.77,69.78,family_buyers,Returning,460,6.86,2.6,true,2024-02-07,product_csv,PROD_ROW_171
+M001,PROD000172,SKU000172,Grey Macrame Wall Hanging,lifestyle,decor,UrbanThreads,2788,1828.67,34.41,family_buyers,Returning,263,12.35,4.6,true,2024-11-19,product_csv,PROD_ROW_172
+M001,PROD000173,SKU000173,Green Vitamin C Serum,beauty,skincare,UrbanThreads,739,453.0,38.7,working_women,High-Value,197,15.51,3.4,true,2024-02-15,product_csv,PROD_ROW_173
+M001,PROD000174,SKU000174,Grey Wrap Dress,fashion,dress,UrbanThreads,1981,1603.73,19.04,working_women,Returning,401,11.45,4.6,true,2024-09-30,product_csv,PROD_ROW_174
+M001,PROD000175,SKU000175,Navy Cotton King Bedsheet,home,bedsheet,UrbanThreads,2312,1490.64,35.53,family_buyers,High-Value,490,7.95,2.9,true,2024-09-08,product_csv,PROD_ROW_175
+M001,PROD000176,SKU000176,Green Scented Candle,lifestyle,decor,UrbanThreads,584,483.9,17.14,family_buyers,Returning,275,15.66,4.0,true,2024-06-11,product_csv,PROD_ROW_176
+M001,PROD000177,SKU000177,Teal Slip-On Sneakers,footwear,sneakers,UrbanThreads,2303,1751.72,23.94,college_students,High-Value,182,10.64,3.8,true,2024-05-16,product_csv,PROD_ROW_177
+M001,PROD000178,SKU000178,Blue Cotton King Bedsheet,home,bedsheet,UrbanThreads,2207,1473.87,33.22,family_buyers,Returning,308,14.46,4.7,true,2024-12-05,product_csv,PROD_ROW_178
+M001,PROD000179,SKU000179,Mustard Printed Bedsheet,home,bedsheet,UrbanThreads,1786,568.15,68.19,family_buyers,High-Value,36,12.09,2.9,true,2024-10-06,product_csv,PROD_ROW_179
+M001,PROD000180,SKU000180,Navy Sateen Bedsheet,home,bedsheet,UrbanThreads,828,443.05,46.49,family_buyers,New,19,15.53,3.5,true,2024-02-27,product_csv,PROD_ROW_180
+M001,PROD000181,SKU000181,Red Linen Bedsheet,home,bedsheet,UrbanThreads,3873,1989.51,48.63,family_buyers,High-Value,382,2.18,2.8,true,2023-08-01,product_csv,PROD_ROW_181
+M001,PROD000182,SKU000182,Pink Boho Plant Pot,lifestyle,decor,UrbanThreads,2551,1639.65,35.73,family_buyers,Returning,477,11.13,3.9,true,2024-11-23,product_csv,PROD_ROW_182
+M001,PROD000183,SKU000183,Mustard Printed Bedsheet,home,bedsheet,UrbanThreads,1486,480.67,67.65,family_buyers,High-Value,162,5.27,4.9,true,2023-11-01,product_csv,PROD_ROW_183
+M001,PROD000184,SKU000184,Orange Reversible Belt,accessories,belt,UrbanThreads,1048,614.24,41.39,premium_buyers,High-Value,150,6.47,3.9,true,2024-07-10,product_csv,PROD_ROW_184
+M001,PROD000185,SKU000185,Maroon Sunscreen SPF50,beauty,skincare,UrbanThreads,898,619.85,30.97,working_women,High-Value,50,7.58,3.6,true,2023-09-20,product_csv,PROD_ROW_185
+M001,PROD000186,SKU000186,Grey Sateen Bedsheet,home,bedsheet,UrbanThreads,2905,2036.05,29.91,family_buyers,High-Value,149,3.61,4.0,true,2024-08-23,product_csv,PROD_ROW_186
+M001,PROD000187,SKU000187,Black Slip-On Sneakers,footwear,sneakers,UrbanThreads,1923,959.83,50.09,college_students,New,221,14.64,3.7,true,2024-11-28,product_csv,PROD_ROW_187
+M001,PROD000188,SKU000188,Green Retro Runners,footwear,sneakers,UrbanThreads,2665,1308.27,50.91,college_students,Returning,343,4.79,4.9,true,2023-11-25,product_csv,PROD_ROW_188
+M001,PROD000189,SKU000189,Teal Premium Leather Belt,accessories,belt,UrbanThreads,1734,926.35,46.58,premium_buyers,High-Value,380,17.16,2.6,false,2023-06-29,product_csv,PROD_ROW_189
+M001,PROD000190,SKU000190,Teal Woody Eau de Parfum,beauty,perfume,UrbanThreads,3851,1604.41,58.34,premium_buyers,High-Value,456,18.59,4.7,true,2023-01-10,product_csv,PROD_ROW_190
+M001,PROD000191,SKU000191,Teal Canvas Belt,accessories,belt,UrbanThreads,981,588.71,39.99,premium_buyers,High-Value,262,17.9,2.8,true,2024-05-31,product_csv,PROD_ROW_191
+M001,PROD000192,SKU000192,Grey Vitamin C Serum,beauty,skincare,UrbanThreads,1653,1257.32,23.94,working_women,High-Value,141,14.65,2.5,true,2023-12-12,product_csv,PROD_ROW_192
+M001,PROD000193,SKU000193,Navy Woven Belt,accessories,belt,UrbanThreads,1707,608.76,64.34,premium_buyers,High-Value,177,2.65,4.2,true,2023-07-09,product_csv,PROD_ROW_193
+M001,PROD000194,SKU000194,Beige Retro Runners,footwear,sneakers,UrbanThreads,1026,724.94,29.34,college_students,Returning,395,6.07,3.3,true,2024-08-19,product_csv,PROD_ROW_194
+M001,PROD000195,SKU000195,Olive Microfibre Bedcover,home,bedsheet,UrbanThreads,3536,2546.04,28.0,family_buyers,Returning,167,4.03,4.2,true,2024-12-21,product_csv,PROD_ROW_195
+M001,PROD000196,SKU000196,Pink Canvas Belt,accessories,belt,UrbanThreads,1151,589.26,48.8,premium_buyers,New,254,3.91,4.4,true,2024-09-12,product_csv,PROD_ROW_196
+M001,PROD000197,SKU000197,Orange Crossbody Bag,accessories,handbag,UrbanThreads,4656,2018.18,56.65,working_women,New,358,15.34,4.7,false,2023-03-25,product_csv,PROD_ROW_197
+M001,PROD000198,SKU000198,Green Minimalist Photo Frame,lifestyle,decor,UrbanThreads,718,248.08,65.45,family_buyers,New,434,16.38,3.8,true,2024-08-09,product_csv,PROD_ROW_198
+M001,PROD000199,SKU000199,Navy Minimalist Photo Frame,lifestyle,decor,UrbanThreads,2530,1535.68,39.3,family_buyers,High-Value,308,10.29,4.7,true,2024-04-01,product_csv,PROD_ROW_199
+M001,PROD000200,SKU000200,Navy Puffer Jacket,fashion,jacket,UrbanThreads,3200,1916.03,40.12,streetwear_lovers,High-Value,246,13.78,3.3,true,2023-01-23,product_csv,PROD_ROW_200
+M001,PROD000201,SKU000201,Maroon Vitamin C Serum,beauty,skincare,UrbanThreads,1191,633.53,46.81,working_women,Returning,186,14.31,3.9,true,2023-03-03,product_csv,PROD_ROW_201
+M001,PROD000202,SKU000202,Black Windbreaker Jacket,fashion,jacket,UrbanThreads,3173,2382.96,24.9,streetwear_lovers,High-Value,383,13.27,3.6,true,2024-01-27,product_csv,PROD_ROW_202
+M001,PROD000203,SKU000203,Red Vitamin C Serum,beauty,skincare,UrbanThreads,2507,1947.58,22.31,working_women,New,101,19.86,3.5,true,2023-05-11,product_csv,PROD_ROW_203
+M001,PROD000204,SKU000204,Maroon Cotton King Bedsheet,home,bedsheet,UrbanThreads,3796,3179.13,16.25,family_buyers,Returning,354,14.66,3.6,true,2024-01-24,product_csv,PROD_ROW_204
+M001,PROD000205,SKU000205,Blue Canvas Sneakers,footwear,sneakers,UrbanThreads,1634,1141.17,30.16,college_students,New,424,13.54,4.0,true,2023-01-17,product_csv,PROD_ROW_205
+M001,PROD000206,SKU000206,White Minimal White Sneakers,footwear,sneakers,UrbanThreads,3431,2852.99,16.85,college_students,New,389,1.84,3.6,true,2024-07-06,product_csv,PROD_ROW_206
+M001,PROD000207,SKU000207,Navy Slip-On Sneakers,footwear,sneakers,UrbanThreads,2183,1574.4,27.88,college_students,High-Value,316,15.68,4.5,true,2023-08-31,product_csv,PROD_ROW_207
+M001,PROD000208,SKU000208,Pink Woven Belt,accessories,belt,UrbanThreads,851,529.78,37.75,premium_buyers,New,295,19.02,4.7,true,2023-06-29,product_csv,PROD_ROW_208
+M001,PROD000209,SKU000209,Green Printed Bedsheet,home,bedsheet,UrbanThreads,891,280.88,68.48,family_buyers,High-Value,173,14.23,3.5,true,2023-11-04,product_csv,PROD_ROW_209
+M001,PROD000210,SKU000210,Brown Sport Deodorant,beauty,perfume,UrbanThreads,4478,3212.82,28.25,premium_buyers,Returning,449,14.44,4.5,true,2023-03-01,product_csv,PROD_ROW_210
+M001,PROD000211,SKU000211,Red Wooden Desk Organiser,lifestyle,decor,UrbanThreads,2569,1994.18,22.38,family_buyers,Returning,114,7.27,2.7,true,2024-04-05,product_csv,PROD_ROW_211
+M001,PROD000212,SKU000212,Green Braided Belt,accessories,belt,UrbanThreads,504,353.98,29.77,premium_buyers,New,106,16.29,4.0,true,2024-11-18,product_csv,PROD_ROW_212
+M001,PROD000213,SKU000213,Blue Macrame Wall Hanging,lifestyle,decor,UrbanThreads,1762,1203.88,31.68,family_buyers,New,489,4.61,4.4,true,2024-05-05,product_csv,PROD_ROW_213
+M001,PROD000214,SKU000214,Red Retro Runners,footwear,sneakers,UrbanThreads,3260,2194.34,32.69,college_students,Returning,248,11.14,3.4,true,2023-09-25,product_csv,PROD_ROW_214
+M001,PROD000215,SKU000215,Blue Tote Bag,accessories,handbag,UrbanThreads,4645,2002.48,56.89,working_women,New,199,6.95,2.6,true,2023-08-15,product_csv,PROD_ROW_215
+M001,PROD000216,SKU000216,Black Microfibre Bedcover,home,bedsheet,UrbanThreads,2965,995.89,66.41,family_buyers,Returning,88,4.73,3.1,true,2024-08-06,product_csv,PROD_ROW_216
+M001,PROD000217,SKU000217,Green Canvas Sneakers,footwear,sneakers,UrbanThreads,2053,883.1,56.98,college_students,High-Value,338,15.05,3.7,true,2023-12-27,product_csv,PROD_ROW_217
+M001,PROD000218,SKU000218,Orange Slip-On Sneakers,footwear,sneakers,UrbanThreads,2999,2245.57,25.12,college_students,High-Value,0,10.95,4.6,true,2023-03-18,product_csv,PROD_ROW_218
+M001,PROD000219,SKU000219,Brown Cotton King Bedsheet,home,bedsheet,UrbanThreads,2388,1849.22,22.56,family_buyers,New,372,3.87,3.0,true,2024-04-11,product_csv,PROD_ROW_219
+M001,PROD000220,SKU000220,Mustard Woven Belt,accessories,belt,UrbanThreads,1388,676.5,51.26,premium_buyers,New,8,16.41,2.5,true,2024-06-26,product_csv,PROD_ROW_220
+M001,PROD000221,SKU000221,Green Microfibre Bedcover,home,bedsheet,UrbanThreads,769,441.24,42.62,family_buyers,New,64,18.44,3.8,true,2023-09-04,product_csv,PROD_ROW_221
+M001,PROD000222,SKU000222,Maroon Canvas Sneakers,footwear,sneakers,UrbanThreads,2093,863.96,58.72,college_students,Returning,217,9.72,3.1,true,2024-12-14,product_csv,PROD_ROW_222
+M001,PROD000223,SKU000223,Pink Minimal White Sneakers,footwear,sneakers,UrbanThreads,3676,1119.63,69.54,college_students,New,217,8.21,3.9,true,2023-02-27,product_csv,PROD_ROW_223
+M001,PROD000224,SKU000224,Orange Sateen Bedsheet,home,bedsheet,UrbanThreads,1037,596.36,42.49,family_buyers,High-Value,411,7.29,4.9,true,2023-04-08,product_csv,PROD_ROW_224
+M001,PROD000225,SKU000225,Grey Macrame Wall Hanging,lifestyle,decor,UrbanThreads,2720,1600.65,41.15,family_buyers,New,360,18.59,4.7,true,2024-07-31,product_csv,PROD_ROW_225
+M001,PROD000226,SKU000226,Navy Microfibre Bedcover,home,bedsheet,UrbanThreads,763,245.07,67.88,family_buyers,High-Value,430,8.57,2.7,true,2023-06-16,product_csv,PROD_ROW_226
+M001,PROD000227,SKU000227,Mustard Boho Plant Pot,lifestyle,decor,UrbanThreads,2613,1744.3,33.25,family_buyers,High-Value,380,2.49,4.4,true,2023-12-21,product_csv,PROD_ROW_227
+M001,PROD000228,SKU000228,Red Breathable Linen Top,fashion,linen_shirt,UrbanThreads,954,632.19,33.73,young_professionals,Returning,25,13.05,4.5,true,2024-04-06,product_csv,PROD_ROW_228
+M001,PROD000229,SKU000229,Beige Sport Deodorant,beauty,perfume,UrbanThreads,3674,2250.26,38.75,premium_buyers,New,405,12.75,4.5,true,2024-12-31,product_csv,PROD_ROW_229
+M001,PROD000230,SKU000230,Olive Breathable Linen Top,fashion,linen_shirt,UrbanThreads,1577,723.18,54.14,young_professionals,High-Value,209,7.02,2.8,true,2023-01-06,product_csv,PROD_ROW_230
+M001,PROD000231,SKU000231,Beige Clutch,accessories,handbag,UrbanThreads,1636,1271.37,22.29,working_women,Returning,239,11.58,3.8,true,2023-04-16,product_csv,PROD_ROW_231
+M001,PROD000232,SKU000232,Beige Relaxed Linen Shirt,fashion,linen_shirt,UrbanThreads,989,515.95,47.83,young_professionals,Returning,16,6.55,3.5,true,2023-03-28,product_csv,PROD_ROW_232
+M001,PROD000233,SKU000233,Mustard Linen Bedsheet,home,bedsheet,UrbanThreads,1393,659.0,52.69,family_buyers,New,147,14.41,3.7,true,2023-03-06,product_csv,PROD_ROW_233
+M001,PROD000234,SKU000234,Olive Low Top Sneakers,footwear,sneakers,UrbanThreads,2226,1299.26,41.63,college_students,Returning,138,18.94,4.3,true,2024-05-22,product_csv,PROD_ROW_234
+M001,PROD000235,SKU000235,Blue Scented Candle,lifestyle,decor,UrbanThreads,953,650.36,31.76,family_buyers,Returning,440,12.78,4.5,true,2023-12-04,product_csv,PROD_ROW_235
+M001,PROD000236,SKU000236,Red Night Repair Cream,beauty,skincare,UrbanThreads,856,586.16,31.52,working_women,Returning,170,4.38,3.5,true,2023-11-23,product_csv,PROD_ROW_236
+M001,PROD000237,SKU000237,Mustard Sling Bag,accessories,handbag,UrbanThreads,3468,2230.51,35.68,working_women,Returning,68,18.71,3.0,true,2024-07-12,product_csv,PROD_ROW_237
+M001,PROD000238,SKU000238,Orange Low Top Sneakers,footwear,sneakers,UrbanThreads,4861,2238.0,53.96,college_students,Returning,435,14.16,4.5,true,2024-02-23,product_csv,PROD_ROW_238
+M001,PROD000239,SKU000239,Navy Microfibre Bedcover,home,bedsheet,UrbanThreads,1690,1201.63,28.9,family_buyers,High-Value,226,15.99,2.7,false,2024-09-04,product_csv,PROD_ROW_239
+M001,PROD000240,SKU000240,Green Night Repair Cream,beauty,skincare,UrbanThreads,2012,1108.6,44.9,working_women,High-Value,468,16.43,4.0,true,2023-03-29,product_csv,PROD_ROW_240
+M001,PROD000241,SKU000241,Pink Blue Relaxed Jeans,fashion,denim_jeans,UrbanThreads,1680,830.17,50.59,young_professionals,High-Value,340,13.87,3.5,true,2023-12-06,product_csv,PROD_ROW_241
+M001,PROD000242,SKU000242,Black Woody Eau de Parfum,beauty,perfume,UrbanThreads,2718,1978.43,27.21,premium_buyers,High-Value,307,14.07,3.1,true,2024-01-19,product_csv,PROD_ROW_242
+M001,PROD000243,SKU000243,Brown Night Repair Cream,beauty,skincare,UrbanThreads,2348,1801.13,23.29,working_women,Returning,63,6.61,4.8,true,2023-03-29,product_csv,PROD_ROW_243
+M001,PROD000244,SKU000244,Beige Fleece Hoodie,fashion,hoodie,UrbanThreads,2404,1441.36,40.04,college_students,High-Value,257,7.62,2.7,true,2024-12-14,product_csv,PROD_ROW_244
+M001,PROD000245,SKU000245,White Sunscreen SPF50,beauty,skincare,UrbanThreads,482,194.92,59.56,working_women,New,444,7.52,2.8,true,2023-06-18,product_csv,PROD_ROW_245
+M001,PROD000246,SKU000246,Green Sateen Bedsheet,home,bedsheet,UrbanThreads,2959,2254.54,23.81,family_buyers,Returning,500,9.78,4.5,true,2024-10-06,product_csv,PROD_ROW_246
+M001,PROD000247,SKU000247,Pink Low Top Sneakers,footwear,sneakers,UrbanThreads,2619,2184.1,16.61,college_students,Returning,313,9.16,2.5,true,2023-08-08,product_csv,PROD_ROW_247
+M001,PROD000248,SKU000248,Brown Minimal White Sneakers,footwear,sneakers,UrbanThreads,3363,2670.34,20.6,college_students,New,197,7.19,3.6,true,2023-09-26,product_csv,PROD_ROW_248
+M001,PROD000249,SKU000249,Green Microfibre Bedcover,home,bedsheet,UrbanThreads,3144,2000.36,36.38,family_buyers,High-Value,68,7.61,4.6,true,2024-09-24,product_csv,PROD_ROW_249
+M001,PROD000250,SKU000250,Teal Slip-On Sneakers,footwear,sneakers,UrbanThreads,3416,2744.37,19.66,college_students,Returning,70,5.53,2.8,true,2024-01-18,product_csv,PROD_ROW_250
+M001,PROD000251,SKU000251,Green Printed Bedsheet,home,bedsheet,UrbanThreads,2412,1258.98,47.8,family_buyers,Returning,105,10.25,3.8,true,2024-10-22,product_csv,PROD_ROW_251
+M001,PROD000252,SKU000252,Blue Canvas Sneakers,footwear,sneakers,UrbanThreads,1573,1175.18,25.29,college_students,High-Value,37,17.44,4.9,true,2024-05-11,product_csv,PROD_ROW_252
+M001,PROD000253,SKU000253,Maroon Low Top Sneakers,footwear,sneakers,UrbanThreads,4946,2676.43,45.89,college_students,Returning,360,10.34,4.3,true,2024-03-30,product_csv,PROD_ROW_253
+M001,PROD000254,SKU000254,White Sport Deodorant,beauty,perfume,UrbanThreads,851,350.84,58.77,premium_buyers,Returning,26,6.22,3.8,true,2023-06-22,product_csv,PROD_ROW_254
+M001,PROD000255,SKU000255,Green Night Repair Cream,beauty,skincare,UrbanThreads,762,407.68,46.5,working_women,High-Value,431,19.83,3.9,true,2023-02-12,product_csv,PROD_ROW_255
+M001,PROD000256,SKU000256,Green Sateen Bedsheet,home,bedsheet,UrbanThreads,2440,1936.56,20.63,family_buyers,Returning,457,19.99,3.6,true,2023-12-23,product_csv,PROD_ROW_256
+M001,PROD000257,SKU000257,Maroon Slim Fit Denim Jacket,fashion,jacket,UrbanThreads,4675,1886.18,59.65,streetwear_lovers,High-Value,311,14.09,4.7,true,2024-09-16,product_csv,PROD_ROW_257
+M001,PROD000258,SKU000258,Navy Linen Bedsheet,home,bedsheet,UrbanThreads,1269,530.86,58.17,family_buyers,New,301,7.67,3.2,true,2024-07-05,product_csv,PROD_ROW_258
+M001,PROD000259,SKU000259,Orange Canvas Sneakers,footwear,sneakers,UrbanThreads,2184,1168.43,46.5,college_students,High-Value,427,2.81,4.9,true,2024-02-26,product_csv,PROD_ROW_259
+M001,PROD000260,SKU000260,Maroon Pique Polo Tee,fashion,polo_tshirt,UrbanThreads,770,548.76,28.73,young_professionals,New,399,17.03,3.5,true,2023-05-26,product_csv,PROD_ROW_260
+M001,PROD000261,SKU000261,Pink Boho Plant Pot,lifestyle,decor,UrbanThreads,1935,1163.72,39.86,family_buyers,Returning,273,15.25,4.2,true,2024-01-13,product_csv,PROD_ROW_261
+M001,PROD000262,SKU000262,Beige Night Repair Cream,beauty,skincare,UrbanThreads,309,114.98,62.79,working_women,High-Value,7,13.06,4.2,true,2023-03-06,product_csv,PROD_ROW_262
+M001,PROD000263,SKU000263,Grey Boho Plant Pot,lifestyle,decor,UrbanThreads,1266,731.63,42.21,family_buyers,Returning,182,11.4,2.8,true,2024-05-11,product_csv,PROD_ROW_263
+M001,PROD000264,SKU000264,Black Premium Leather Belt,accessories,belt,UrbanThreads,1681,704.1,58.11,premium_buyers,New,73,18.66,2.9,true,2024-04-12,product_csv,PROD_ROW_264
+M001,PROD000265,SKU000265,Grey Slim Joggers,fashion,joggers,UrbanThreads,1930,1320.07,31.6,fitness_lifestyle,New,345,7.85,2.7,true,2024-11-11,product_csv,PROD_ROW_265
+M001,PROD000266,SKU000266,Black Printed Bedsheet,home,bedsheet,UrbanThreads,3261,2223.9,31.8,family_buyers,Returning,345,2.73,2.7,true,2023-08-07,product_csv,PROD_ROW_266
+M001,PROD000267,SKU000267,Navy Sport Deodorant,beauty,perfume,UrbanThreads,2451,1383.11,43.57,premium_buyers,New,14,14.22,4.5,true,2024-03-08,product_csv,PROD_ROW_267
+M001,PROD000268,SKU000268,Blue Cotton King Bedsheet,home,bedsheet,UrbanThreads,1636,1045.91,36.07,family_buyers,New,170,7.98,3.2,true,2024-01-27,product_csv,PROD_ROW_268
+M001,PROD000269,SKU000269,White Slip-On Sneakers,footwear,sneakers,UrbanThreads,3306,2794.69,15.47,college_students,Returning,189,14.73,4.1,true,2023-06-05,product_csv,PROD_ROW_269
+M001,PROD000270,SKU000270,Maroon Moisturising Cream,beauty,skincare,UrbanThreads,654,233.4,64.31,working_women,New,311,14.87,3.4,true,2024-03-15,product_csv,PROD_ROW_270
+M001,PROD000271,SKU000271,Grey Canvas Belt,accessories,belt,UrbanThreads,1719,1381.5,19.63,premium_buyers,High-Value,317,14.7,3.2,true,2024-12-08,product_csv,PROD_ROW_271
+M001,PROD000272,SKU000272,Grey Sport Polo Tee,fashion,polo_tshirt,UrbanThreads,1741,991.96,43.02,young_professionals,Returning,340,2.04,4.7,true,2023-09-03,product_csv,PROD_ROW_272
+M001,PROD000273,SKU000273,White Moisturising Cream,beauty,skincare,UrbanThreads,2345,1170.28,50.09,working_women,High-Value,465,19.58,5.0,true,2023-11-21,product_csv,PROD_ROW_273
+M001,PROD000274,SKU000274,Maroon Slip-On Sneakers,footwear,sneakers,UrbanThreads,2722,1766.64,35.1,college_students,Returning,498,19.76,2.7,true,2024-08-24,product_csv,PROD_ROW_274
+M001,PROD000275,SKU000275,Olive Graphic Oversized Tee,fashion,oversized_tshirt,UrbanThreads,439,150.39,65.74,streetwear_lovers,High-Value,156,12.94,3.8,true,2024-03-01,product_csv,PROD_ROW_275
+M001,PROD000276,SKU000276,White Night Repair Cream,beauty,skincare,UrbanThreads,2501,1278.45,48.88,working_women,New,168,2.5,4.8,true,2023-06-09,product_csv,PROD_ROW_276
+M001,PROD000277,SKU000277,Red Wooden Desk Organiser,lifestyle,decor,UrbanThreads,2997,1289.39,56.98,family_buyers,Returning,367,9.31,4.9,true,2023-09-02,product_csv,PROD_ROW_277
+M001,PROD000278,SKU000278,White Straight Cut Denim,fashion,denim_jeans,UrbanThreads,1474,885.35,39.94,young_professionals,Returning,351,15.09,4.4,false,2023-05-03,product_csv,PROD_ROW_278
+M001,PROD000279,SKU000279,Orange Urban Hoodie,fashion,hoodie,UrbanThreads,1670,963.54,42.3,college_students,High-Value,274,15.88,4.3,true,2023-06-20,product_csv,PROD_ROW_279
+M001,PROD000280,SKU000280,Orange Canvas Belt,accessories,belt,UrbanThreads,1900,688.7,63.75,premium_buyers,Returning,423,9.16,3.8,true,2023-09-27,product_csv,PROD_ROW_280
+M001,PROD000281,SKU000281,Blue Printed Bedsheet,home,bedsheet,UrbanThreads,2791,1819.54,34.81,family_buyers,High-Value,95,7.99,3.1,true,2023-04-16,product_csv,PROD_ROW_281
+M001,PROD000282,SKU000282,Grey Wooden Desk Organiser,lifestyle,decor,UrbanThreads,409,337.74,17.42,family_buyers,New,33,9.96,3.5,true,2023-06-03,product_csv,PROD_ROW_282
+M001,PROD000283,SKU000283,Green Low Top Sneakers,footwear,sneakers,UrbanThreads,1918,1290.83,32.7,college_students,High-Value,5,6.15,2.7,true,2024-01-17,product_csv,PROD_ROW_283
+M001,PROD000284,SKU000284,Pink Cotton Summer Dress,fashion,dress,UrbanThreads,1533,1114.87,27.28,working_women,New,498,8.62,4.7,true,2023-10-17,product_csv,PROD_ROW_284
+M001,PROD000285,SKU000285,White Crossbody Bag,accessories,handbag,UrbanThreads,4540,3839.1,15.44,working_women,Returning,298,15.91,4.3,true,2023-09-06,product_csv,PROD_ROW_285
+M001,PROD000286,SKU000286,Mustard Face Wash Gel,beauty,skincare,UrbanThreads,1099,491.41,55.29,working_women,New,87,1.12,3.5,false,2023-08-27,product_csv,PROD_ROW_286
+M001,PROD000287,SKU000287,Pink Scented Candle,lifestyle,decor,UrbanThreads,1771,1503.93,15.08,family_buyers,High-Value,382,6.84,3.0,true,2023-09-01,product_csv,PROD_ROW_287
+M001,PROD000288,SKU000288,Black Moisturising Cream,beauty,skincare,UrbanThreads,1445,1154.32,20.12,working_women,High-Value,221,14.32,3.4,true,2023-03-28,product_csv,PROD_ROW_288
+M001,PROD000289,SKU000289,Green Macrame Wall Hanging,lifestyle,decor,UrbanThreads,2014,1629.01,19.12,family_buyers,Returning,349,19.32,3.1,true,2023-09-25,product_csv,PROD_ROW_289
+M001,PROD000290,SKU000290,Orange Clutch,accessories,handbag,UrbanThreads,3404,2045.75,39.9,working_women,New,493,4.85,4.4,true,2024-08-21,product_csv,PROD_ROW_290
+M001,PROD000291,SKU000291,White Zip Hoodie,fashion,hoodie,UrbanThreads,2840,1686.02,40.63,college_students,New,8,7.81,4.4,true,2024-04-07,product_csv,PROD_ROW_291
+M001,PROD000292,SKU000292,Olive Tote Bag,accessories,handbag,UrbanThreads,1539,1174.74,23.67,working_women,High-Value,366,12.46,3.0,true,2023-12-02,product_csv,PROD_ROW_292
+M001,PROD000293,SKU000293,Orange Retro Runners,footwear,sneakers,UrbanThreads,4965,3248.81,34.57,college_students,New,356,6.68,4.6,true,2023-06-28,product_csv,PROD_ROW_293
+M001,PROD000294,SKU000294,Maroon Active Joggers,fashion,joggers,UrbanThreads,1737,761.77,56.14,fitness_lifestyle,New,246,2.94,4.5,true,2023-05-05,product_csv,PROD_ROW_294
+M001,PROD000295,SKU000295,Maroon Graphic Oversized Tee,fashion,oversized_tshirt,UrbanThreads,532,394.23,25.9,streetwear_lovers,Returning,361,12.98,4.1,true,2024-08-19,product_csv,PROD_ROW_295
+M001,PROD000296,SKU000296,Teal Scented Candle,lifestyle,decor,UrbanThreads,488,147.16,69.84,family_buyers,High-Value,237,16.38,2.7,true,2023-12-06,product_csv,PROD_ROW_296
+M001,PROD000297,SKU000297,Blue Oversized T-Shirt,fashion,oversized_tshirt,UrbanThreads,571,195.13,65.83,streetwear_lovers,High-Value,212,10.43,3.5,true,2024-03-12,product_csv,PROD_ROW_297
+M001,PROD000298,SKU000298,Grey Retro Runners,footwear,sneakers,UrbanThreads,2125,1479.17,30.39,college_students,New,324,12.76,3.1,true,2023-10-30,product_csv,PROD_ROW_298
+M001,PROD000299,SKU000299,Teal Night Repair Cream,beauty,skincare,UrbanThreads,2261,1846.02,18.35,working_women,Returning,80,8.97,4.1,false,2024-06-22,product_csv,PROD_ROW_299
+M001,PROD000300,SKU000300,Red Canvas Sneakers,footwear,sneakers,UrbanThreads,2963,1631.18,44.95,college_students,Returning,477,11.75,3.3,true,2023-10-04,product_csv,PROD_ROW_300
+M001,PROD000301,SKU000301,Beige Slip-On Sneakers,footwear,sneakers,UrbanThreads,1896,1581.04,16.61,college_students,New,424,19.84,3.8,true,2024-08-21,product_csv,PROD_ROW_301
+M001,PROD000302,SKU000302,White Retro Runners,footwear,sneakers,UrbanThreads,3689,2646.36,28.26,college_students,High-Value,38,15.52,4.9,true,2024-08-12,product_csv,PROD_ROW_302
+M001,PROD000303,SKU000303,Teal Moisturising Cream,beauty,skincare,UrbanThreads,1020,734.29,28.01,working_women,High-Value,367,7.82,4.0,true,2024-12-21,product_csv,PROD_ROW_303
+M001,PROD000304,SKU000304,Mustard Linen Bedsheet,home,bedsheet,UrbanThreads,1281,692.11,45.97,family_buyers,Returning,287,6.87,3.7,true,2023-04-03,product_csv,PROD_ROW_304
+M001,PROD000305,SKU000305,Mustard Relaxed Denim Jeans,fashion,denim_jeans,UrbanThreads,1080,605.29,43.95,young_professionals,Returning,479,16.91,4.5,true,2023-12-15,product_csv,PROD_ROW_305
+M001,PROD000306,SKU000306,Teal Microfibre Bedcover,home,bedsheet,UrbanThreads,942,789.35,16.2,family_buyers,New,8,17.35,4.9,true,2024-01-18,product_csv,PROD_ROW_306
+M001,PROD000307,SKU000307,Mustard Cotton King Bedsheet,home,bedsheet,UrbanThreads,2077,1420.73,31.6,family_buyers,New,384,19.03,4.5,true,2024-05-13,product_csv,PROD_ROW_307
+M001,PROD000308,SKU000308,Navy Linen Bedsheet,home,bedsheet,UrbanThreads,3539,1276.59,63.93,family_buyers,New,350,12.19,2.9,true,2023-11-11,product_csv,PROD_ROW_308
+M001,PROD000309,SKU000309,Navy Sateen Bedsheet,home,bedsheet,UrbanThreads,3684,3127.76,15.1,family_buyers,High-Value,26,4.46,3.3,true,2024-09-18,product_csv,PROD_ROW_309
+M001,PROD000310,SKU000310,Teal Low Top Sneakers,footwear,sneakers,UrbanThreads,1575,1051.88,33.21,college_students,New,187,19.67,2.9,true,2023-04-01,product_csv,PROD_ROW_310
+M001,PROD000311,SKU000311,Blue Cotton King Bedsheet,home,bedsheet,UrbanThreads,1785,1311.39,26.53,family_buyers,Returning,141,15.95,4.3,true,2023-02-19,product_csv,PROD_ROW_311
+M001,PROD000312,SKU000312,Orange Face Wash Gel,beauty,skincare,UrbanThreads,980,356.23,63.65,working_women,Returning,5,11.37,2.8,true,2024-05-05,product_csv,PROD_ROW_312
+M001,PROD000313,SKU000313,Navy Boho Plant Pot,lifestyle,decor,UrbanThreads,700,287.31,58.96,family_buyers,Returning,20,7.06,4.9,false,2023-03-17,product_csv,PROD_ROW_313
+M001,PROD000314,SKU000314,Teal Reversible Belt,accessories,belt,UrbanThreads,728,325.71,55.26,premium_buyers,New,183,12.29,4.0,true,2024-05-09,product_csv,PROD_ROW_314
+M001,PROD000315,SKU000315,Red Sateen Bedsheet,home,bedsheet,UrbanThreads,3186,1148.99,63.94,family_buyers,New,61,7.29,4.9,true,2024-02-24,product_csv,PROD_ROW_315
+M001,PROD000316,SKU000316,Pink Microfibre Bedcover,home,bedsheet,UrbanThreads,1917,1378.99,28.07,family_buyers,Returning,302,11.44,3.7,true,2023-02-25,product_csv,PROD_ROW_316
+M001,PROD000317,SKU000317,Red Premium Leather Belt,accessories,belt,UrbanThreads,1002,397.65,60.31,premium_buyers,New,59,1.49,2.9,true,2023-10-26,product_csv,PROD_ROW_317
+M001,PROD000318,SKU000318,Maroon Slim Fit Denim Jacket,fashion,jacket,UrbanThreads,2762,1155.39,58.17,streetwear_lovers,Returning,468,13.56,2.7,true,2024-07-11,product_csv,PROD_ROW_318
+M001,PROD000319,SKU000319,Beige Floral Mist,beauty,perfume,UrbanThreads,3625,2709.25,25.26,premium_buyers,Returning,235,9.84,3.1,true,2023-10-03,product_csv,PROD_ROW_319
+M001,PROD000320,SKU000320,Navy Scented Candle,lifestyle,decor,UrbanThreads,750,361.89,51.75,family_buyers,Returning,397,12.2,3.9,false,2024-02-01,product_csv,PROD_ROW_320
+M001,PROD000321,SKU000321,Green Boho Plant Pot,lifestyle,decor,UrbanThreads,2744,1001.81,63.49,family_buyers,Returning,50,8.5,4.6,true,2023-02-05,product_csv,PROD_ROW_321
+M001,PROD000322,SKU000322,White Boho Plant Pot,lifestyle,decor,UrbanThreads,1107,363.11,67.2,family_buyers,New,423,4.66,2.6,true,2023-03-22,product_csv,PROD_ROW_322
+M001,PROD000323,SKU000323,Grey Sateen Bedsheet,home,bedsheet,UrbanThreads,3136,2220.8,29.18,family_buyers,New,208,11.57,3.9,true,2023-10-10,product_csv,PROD_ROW_323
+M001,PROD000324,SKU000324,Teal Scented Candle,lifestyle,decor,UrbanThreads,2951,1554.68,47.32,family_buyers,New,222,3.84,3.9,true,2024-08-19,product_csv,PROD_ROW_324
+M001,PROD000325,SKU000325,Mustard Linen Shirt,fashion,linen_shirt,UrbanThreads,2408,1667.9,30.74,young_professionals,Returning,459,8.81,3.5,false,2024-05-12,product_csv,PROD_ROW_325
+M001,PROD000326,SKU000326,Black Macrame Wall Hanging,lifestyle,decor,UrbanThreads,1527,959.51,37.16,family_buyers,New,212,17.9,3.3,true,2023-09-01,product_csv,PROD_ROW_326
+M001,PROD000327,SKU000327,Teal Windbreaker Jacket,fashion,jacket,UrbanThreads,3024,2536.75,16.11,streetwear_lovers,Returning,153,17.01,4.6,true,2024-12-02,product_csv,PROD_ROW_327
+M001,PROD000328,SKU000328,Navy Blue Relaxed Jeans,fashion,denim_jeans,UrbanThreads,2813,1193.51,57.57,young_professionals,Returning,383,8.92,4.1,true,2023-07-12,product_csv,PROD_ROW_328
+M001,PROD000329,SKU000329,Teal Floral Mist,beauty,perfume,UrbanThreads,4567,1974.22,56.77,premium_buyers,New,273,16.04,2.7,true,2024-12-27,product_csv,PROD_ROW_329
+M001,PROD000330,SKU000330,Navy Wooden Desk Organiser,lifestyle,decor,UrbanThreads,2728,2275.37,16.59,family_buyers,New,438,2.09,2.6,true,2023-02-21,product_csv,PROD_ROW_330
+M001,PROD000331,SKU000331,Olive Canvas Belt,accessories,belt,UrbanThreads,1349,771.87,42.78,premium_buyers,High-Value,0,5.6,3.7,true,2024-04-01,product_csv,PROD_ROW_331
+M001,PROD000332,SKU000332,Mustard Slip-On Sneakers,footwear,sneakers,UrbanThreads,2431,1606.07,33.93,college_students,High-Value,435,14.09,3.2,true,2024-01-31,product_csv,PROD_ROW_332
+M001,PROD000333,SKU000333,Maroon Graphic Hoodie,fashion,hoodie,UrbanThreads,1876,710.23,62.14,college_students,High-Value,115,6.11,3.5,true,2023-01-21,product_csv,PROD_ROW_333
+M001,PROD000334,SKU000334,Blue Sateen Bedsheet,home,bedsheet,UrbanThreads,3350,2528.38,24.53,family_buyers,New,139,12.56,4.9,true,2024-12-30,product_csv,PROD_ROW_334
+M001,PROD000335,SKU000335,Red Printed Bedsheet,home,bedsheet,UrbanThreads,2127,1270.99,40.24,family_buyers,Returning,164,13.87,4.6,true,2024-02-11,product_csv,PROD_ROW_335
+M001,PROD000336,SKU000336,Black Wooden Desk Organiser,lifestyle,decor,UrbanThreads,1931,1045.05,45.88,family_buyers,Returning,1,10.15,3.3,true,2023-10-11,product_csv,PROD_ROW_336
+M001,PROD000337,SKU000337,Maroon Microfibre Bedcover,home,bedsheet,UrbanThreads,1768,864.79,51.09,family_buyers,New,86,10.83,3.1,true,2023-02-28,product_csv,PROD_ROW_337
+M001,PROD000338,SKU000338,Pink Minimalist Photo Frame,lifestyle,decor,UrbanThreads,972,440.6,54.67,family_buyers,Returning,142,18.23,3.5,true,2023-02-06,product_csv,PROD_ROW_338
+M001,PROD000339,SKU000339,Beige Macrame Wall Hanging,lifestyle,decor,UrbanThreads,2588,1291.22,50.11,family_buyers,High-Value,193,10.64,4.6,true,2024-11-04,product_csv,PROD_ROW_339
+M001,PROD000340,SKU000340,Olive Scented Candle,lifestyle,decor,UrbanThreads,2327,1814.2,22.04,family_buyers,High-Value,423,11.62,4.8,true,2024-11-27,product_csv,PROD_ROW_340
+M001,PROD000341,SKU000341,Grey Canvas Belt,accessories,belt,UrbanThreads,856,377.23,55.93,premium_buyers,Returning,413,17.85,3.4,true,2024-08-22,product_csv,PROD_ROW_341
+M001,PROD000342,SKU000342,Maroon Tote Bag,accessories,handbag,UrbanThreads,4653,3817.68,17.95,working_women,Returning,465,4.7,2.8,false,2024-11-28,product_csv,PROD_ROW_342
+M001,PROD000343,SKU000343,Red Vitamin C Serum,beauty,skincare,UrbanThreads,916,709.4,22.55,working_women,Returning,219,19.76,4.7,true,2024-04-13,product_csv,PROD_ROW_343
+M001,PROD000344,SKU000344,Maroon Retro Runners,footwear,sneakers,UrbanThreads,4189,3374.46,19.44,college_students,High-Value,100,6.95,2.6,true,2024-04-07,product_csv,PROD_ROW_344
+M001,PROD000345,SKU000345,Brown Braided Belt,accessories,belt,UrbanThreads,1579,678.23,57.05,premium_buyers,New,76,12.68,4.1,true,2024-02-18,product_csv,PROD_ROW_345
+M001,PROD000346,SKU000346,Red Vitamin C Serum,beauty,skincare,UrbanThreads,453,252.06,44.36,working_women,New,466,7.12,4.6,true,2023-07-15,product_csv,PROD_ROW_346
+M001,PROD000347,SKU000347,Pink Graphic Oversized Tee,fashion,oversized_tshirt,UrbanThreads,630,295.19,53.14,streetwear_lovers,Returning,76,2.95,3.8,true,2023-11-10,product_csv,PROD_ROW_347
+M001,PROD000348,SKU000348,Maroon Minimal White Sneakers,footwear,sneakers,UrbanThreads,2220,728.93,67.17,college_students,High-Value,276,12.33,3.3,true,2024-12-04,product_csv,PROD_ROW_348
+M001,PROD000349,SKU000349,Teal Low Top Sneakers,footwear,sneakers,UrbanThreads,2470,1080.47,56.26,college_students,Returning,19,5.34,4.3,true,2023-05-15,product_csv,PROD_ROW_349
+M001,PROD000350,SKU000350,Mustard Slip-On Sneakers,footwear,sneakers,UrbanThreads,1691,1322.8,21.77,college_students,Returning,4,15.65,4.1,true,2024-08-31,product_csv,PROD_ROW_350
+M001,PROD000351,SKU000351,Pink Linen Shirt,fashion,linen_shirt,UrbanThreads,897,422.16,52.94,young_professionals,Returning,204,3.35,3.1,true,2024-12-19,product_csv,PROD_ROW_351
+M001,PROD000352,SKU000352,Orange Minimal White Sneakers,footwear,sneakers,UrbanThreads,2232,1380.54,38.15,college_students,High-Value,276,6.13,4.0,true,2023-05-21,product_csv,PROD_ROW_352
+M001,PROD000353,SKU000353,Green Sport Deodorant,beauty,perfume,UrbanThreads,1563,1085.52,30.55,premium_buyers,Returning,111,12.57,4.4,true,2024-06-19,product_csv,PROD_ROW_353
+M001,PROD000354,SKU000354,Orange Low Top Sneakers,footwear,sneakers,UrbanThreads,2208,1682.04,23.82,college_students,Returning,476,4.95,4.8,true,2023-12-05,product_csv,PROD_ROW_354
+M001,PROD000355,SKU000355,Black Minimal White Sneakers,footwear,sneakers,UrbanThreads,4713,3719.8,21.07,college_students,New,496,2.71,3.8,true,2023-04-14,product_csv,PROD_ROW_355
+M001,PROD000356,SKU000356,Blue Canvas Belt,accessories,belt,UrbanThreads,939,558.37,40.54,premium_buyers,New,457,1.75,3.2,true,2024-11-24,product_csv,PROD_ROW_356
+M001,PROD000357,SKU000357,Orange Tote Bag,accessories,handbag,UrbanThreads,1577,602.12,61.82,working_women,New,446,3.63,4.1,true,2023-12-03,product_csv,PROD_ROW_357
+M001,PROD000358,SKU000358,Mustard Clutch,accessories,handbag,UrbanThreads,1560,1006.29,35.49,working_women,New,68,8.61,4.9,true,2023-10-06,product_csv,PROD_ROW_358
+M001,PROD000359,SKU000359,Brown Face Wash Gel,beauty,skincare,UrbanThreads,2956,1071.94,63.74,working_women,New,77,14.23,2.6,true,2023-06-13,product_csv,PROD_ROW_359
+M001,PROD000360,SKU000360,Teal Lounge Joggers,fashion,joggers,UrbanThreads,1587,648.69,59.12,fitness_lifestyle,New,322,8.22,3.4,true,2023-01-30,product_csv,PROD_ROW_360
+M001,PROD000361,SKU000361,Blue Printed Bedsheet,home,bedsheet,UrbanThreads,1161,420.08,63.82,family_buyers,New,42,14.09,3.3,true,2024-12-22,product_csv,PROD_ROW_361
+M001,PROD000362,SKU000362,Pink Microfibre Bedcover,home,bedsheet,UrbanThreads,2825,1588.48,43.77,family_buyers,Returning,348,14.81,3.7,true,2024-11-10,product_csv,PROD_ROW_362
+M001,PROD000363,SKU000363,Navy Linen Bedsheet,home,bedsheet,UrbanThreads,3209,2631.34,18.0,family_buyers,High-Value,7,17.19,4.7,true,2023-03-18,product_csv,PROD_ROW_363
+M001,PROD000364,SKU000364,Grey Sunscreen SPF50,beauty,skincare,UrbanThreads,1438,1182.48,17.77,working_women,High-Value,339,8.19,4.5,false,2023-03-22,product_csv,PROD_ROW_364
+M001,PROD000365,SKU000365,Brown Night Repair Cream,beauty,skincare,UrbanThreads,2134,1710.59,19.84,working_women,Returning,171,3.26,3.7,true,2024-10-31,product_csv,PROD_ROW_365
+M001,PROD000366,SKU000366,Red Premium Linen Casual Shirt,fashion,linen_shirt,UrbanThreads,872,474.0,45.64,young_professionals,New,415,12.48,4.0,true,2023-11-08,product_csv,PROD_ROW_366
+M001,PROD000367,SKU000367,Pink Boho Plant Pot,lifestyle,decor,UrbanThreads,1795,1167.04,34.98,family_buyers,New,442,9.63,3.9,true,2024-09-26,product_csv,PROD_ROW_367
+M001,PROD000368,SKU000368,Orange Minimalist Photo Frame,lifestyle,decor,UrbanThreads,2252,1772.97,21.27,family_buyers,New,184,7.75,4.1,true,2023-10-26,product_csv,PROD_ROW_368
+M001,PROD000369,SKU000369,Orange Scented Candle,lifestyle,decor,UrbanThreads,586,209.04,64.33,family_buyers,New,430,14.62,4.3,true,2023-04-20,product_csv,PROD_ROW_369
+M001,PROD000370,SKU000370,Grey Premium Leather Belt,accessories,belt,UrbanThreads,1203,879.91,26.86,premium_buyers,High-Value,5,3.05,3.5,true,2024-10-10,product_csv,PROD_ROW_370
+M001,PROD000371,SKU000371,Brown Printed Bedsheet,home,bedsheet,UrbanThreads,2572,1254.75,51.22,family_buyers,New,265,1.08,4.3,true,2024-07-20,product_csv,PROD_ROW_371
+M001,PROD000372,SKU000372,Teal Night Repair Cream,beauty,skincare,UrbanThreads,1024,480.77,53.05,working_women,High-Value,427,3.44,3.5,true,2024-09-06,product_csv,PROD_ROW_372
+M001,PROD000373,SKU000373,Green Boho Plant Pot,lifestyle,decor,UrbanThreads,2113,657.72,68.87,family_buyers,Returning,213,19.31,4.9,true,2024-04-08,product_csv,PROD_ROW_373
+M001,PROD000374,SKU000374,Red Slip-On Sneakers,footwear,sneakers,UrbanThreads,3866,1401.27,63.75,college_students,Returning,441,14.33,4.7,true,2024-12-29,product_csv,PROD_ROW_374
+M001,PROD000375,SKU000375,Grey Sateen Bedsheet,home,bedsheet,UrbanThreads,3255,1487.82,54.29,family_buyers,High-Value,77,19.65,4.1,true,2023-07-02,product_csv,PROD_ROW_375
+M001,PROD000376,SKU000376,Orange Scented Candle,lifestyle,decor,UrbanThreads,1841,995.51,45.93,family_buyers,High-Value,392,17.98,3.8,true,2024-03-08,product_csv,PROD_ROW_376
+M001,PROD000377,SKU000377,White Cotton Summer Dress,fashion,dress,UrbanThreads,2359,1816.6,22.99,working_women,New,146,15.25,2.9,false,2023-10-21,product_csv,PROD_ROW_377
+M001,PROD000378,SKU000378,Navy Cotton King Bedsheet,home,bedsheet,UrbanThreads,3527,1476.41,58.14,family_buyers,High-Value,26,7.81,3.6,true,2024-09-22,product_csv,PROD_ROW_378
+M001,PROD000379,SKU000379,Orange Linen Bedsheet,home,bedsheet,UrbanThreads,2291,1647.97,28.07,family_buyers,High-Value,350,1.89,3.5,true,2024-03-02,product_csv,PROD_ROW_379
+M001,PROD000380,SKU000380,Green Cotton King Bedsheet,home,bedsheet,UrbanThreads,752,331.62,55.9,family_buyers,High-Value,454,15.84,4.7,true,2023-08-19,product_csv,PROD_ROW_380
+M001,PROD000381,SKU000381,Brown Linen Bedsheet,home,bedsheet,UrbanThreads,2937,1303.59,55.61,family_buyers,High-Value,3,6.59,2.9,true,2024-11-30,product_csv,PROD_ROW_381
+M001,PROD000382,SKU000382,Navy Graphic Hoodie,fashion,hoodie,UrbanThreads,1487,955.46,35.75,college_students,Returning,294,6.02,2.9,true,2023-09-19,product_csv,PROD_ROW_382
+M001,PROD000383,SKU000383,Blue Printed Cotton Kurta,fashion,kurta,UrbanThreads,762,583.28,23.45,working_women,High-Value,0,15.7,4.1,true,2024-11-08,product_csv,PROD_ROW_383
+M001,PROD000384,SKU000384,Brown Crossbody Bag,accessories,handbag,UrbanThreads,3732,3022.6,19.01,working_women,High-Value,122,19.18,3.8,true,2024-06-01,product_csv,PROD_ROW_384
+M001,PROD000385,SKU000385,Green Slip-On Sneakers,footwear,sneakers,UrbanThreads,2651,2119.29,20.06,college_students,New,349,7.31,3.4,true,2023-08-12,product_csv,PROD_ROW_385
+M001,PROD000386,SKU000386,Green Scented Candle,lifestyle,decor,UrbanThreads,868,418.45,51.79,family_buyers,New,473,13.2,4.8,true,2023-09-07,product_csv,PROD_ROW_386
+M001,PROD000387,SKU000387,Red Festive Kurta,fashion,kurta,UrbanThreads,2179,1544.64,29.11,working_women,New,476,10.82,4.4,true,2024-06-10,product_csv,PROD_ROW_387
+M001,PROD000388,SKU000388,Blue Scented Candle,lifestyle,decor,UrbanThreads,1613,574.14,64.41,family_buyers,Returning,273,2.56,2.7,true,2024-07-04,product_csv,PROD_ROW_388
+M001,PROD000389,SKU000389,Pink Scented Candle,lifestyle,decor,UrbanThreads,1262,607.42,51.87,family_buyers,High-Value,227,16.88,3.0,true,2024-12-20,product_csv,PROD_ROW_389
+M001,PROD000390,SKU000390,Pink Cotton King Bedsheet,home,bedsheet,UrbanThreads,3758,1776.32,52.73,family_buyers,Returning,377,7.3,2.7,true,2023-02-25,product_csv,PROD_ROW_390
+M001,PROD000391,SKU000391,Green Minimal White Sneakers,footwear,sneakers,UrbanThreads,3354,1335.26,60.19,college_students,Returning,208,9.57,3.5,true,2023-11-20,product_csv,PROD_ROW_391
+M001,PROD000392,SKU000392,Pink Everyday Joggers,fashion,joggers,UrbanThreads,1694,1434.4,15.32,fitness_lifestyle,High-Value,309,12.36,4.6,true,2024-01-02,product_csv,PROD_ROW_392
+M001,PROD000393,SKU000393,Olive Minimalist Photo Frame,lifestyle,decor,UrbanThreads,2883,2313.38,19.76,family_buyers,Returning,212,16.62,2.6,true,2023-06-10,product_csv,PROD_ROW_393
+M001,PROD000394,SKU000394,Navy Boho Plant Pot,lifestyle,decor,UrbanThreads,2634,1811.56,31.22,family_buyers,Returning,356,19.1,4.9,true,2024-10-25,product_csv,PROD_ROW_394
+M001,PROD000395,SKU000395,Green Woven Belt,accessories,belt,UrbanThreads,688,538.17,21.78,premium_buyers,High-Value,315,8.49,3.9,true,2023-03-29,product_csv,PROD_ROW_395
+M001,PROD000396,SKU000396,Orange Canvas Belt,accessories,belt,UrbanThreads,832,518.37,37.7,premium_buyers,New,92,4.5,4.0,true,2023-09-16,product_csv,PROD_ROW_396
+M001,PROD000397,SKU000397,Navy Slip-On Sneakers,footwear,sneakers,UrbanThreads,4489,3681.37,17.99,college_students,Returning,340,11.44,3.2,true,2023-03-10,product_csv,PROD_ROW_397
+M001,PROD000398,SKU000398,Grey Woven Belt,accessories,belt,UrbanThreads,1396,456.01,67.33,premium_buyers,New,353,13.45,2.8,true,2024-09-26,product_csv,PROD_ROW_398
+M001,PROD000399,SKU000399,Beige Straight Cut Denim,fashion,denim_jeans,UrbanThreads,2844,1903.8,33.06,young_professionals,High-Value,309,3.9,3.9,false,2023-11-20,product_csv,PROD_ROW_399
+M001,PROD000400,SKU000400,Black Oud Perfume,beauty,perfume,UrbanThreads,2615,1092.77,58.21,premium_buyers,Returning,440,7.83,4.2,true,2023-12-06,product_csv,PROD_ROW_400
+M001,PROD000401,SKU000401,Blue Sunscreen SPF50,beauty,skincare,UrbanThreads,1550,902.36,41.78,working_women,New,340,12.53,4.6,true,2023-05-24,product_csv,PROD_ROW_401
+M001,PROD000402,SKU000402,Olive Scented Candle,lifestyle,decor,UrbanThreads,707,254.05,64.07,family_buyers,High-Value,25,16.44,3.9,true,2024-08-27,product_csv,PROD_ROW_402
+M001,PROD000403,SKU000403,Green Canvas Sneakers,footwear,sneakers,UrbanThreads,3225,1155.54,64.17,college_students,Returning,344,15.73,3.4,true,2023-08-17,product_csv,PROD_ROW_403
+M001,PROD000404,SKU000404,Navy Boho Plant Pot,lifestyle,decor,UrbanThreads,2451,1395.29,43.07,family_buyers,Returning,267,1.2,3.1,true,2024-09-20,product_csv,PROD_ROW_404
+M001,PROD000405,SKU000405,Brown Linen Bedsheet,home,bedsheet,UrbanThreads,1273,769.63,39.54,family_buyers,High-Value,495,11.75,4.7,true,2023-05-30,product_csv,PROD_ROW_405
+M001,PROD000406,SKU000406,Beige Cotton King Bedsheet,home,bedsheet,UrbanThreads,1595,687.75,56.88,family_buyers,New,145,8.02,2.6,true,2023-07-31,product_csv,PROD_ROW_406
+M001,PROD000407,SKU000407,Red Boho Plant Pot,lifestyle,decor,UrbanThreads,2261,825.6,63.49,family_buyers,High-Value,175,2.96,4.9,true,2024-10-10,product_csv,PROD_ROW_407
+M001,PROD000408,SKU000408,Mustard Crossbody Bag,accessories,handbag,UrbanThreads,2223,1429.03,35.72,working_women,Returning,310,13.41,4.6,true,2024-06-13,product_csv,PROD_ROW_408
+M001,PROD000409,SKU000409,Teal Sling Bag,accessories,handbag,UrbanThreads,4123,2704.3,34.41,working_women,Returning,415,10.16,4.0,true,2024-05-28,product_csv,PROD_ROW_409
+M001,PROD000410,SKU000410,Navy Retro Runners,footwear,sneakers,UrbanThreads,1314,745.04,43.3,college_students,New,86,4.55,3.4,true,2023-05-02,product_csv,PROD_ROW_410
+M001,PROD000411,SKU000411,Red Microfibre Bedcover,home,bedsheet,UrbanThreads,3649,2874.18,21.23,family_buyers,Returning,117,12.23,4.1,true,2024-02-25,product_csv,PROD_ROW_411
+M001,PROD000412,SKU000412,Black Relaxed Denim Jeans,fashion,denim_jeans,UrbanThreads,3348,1755.05,47.58,young_professionals,High-Value,272,1.74,3.9,true,2023-02-27,product_csv,PROD_ROW_412
+M001,PROD000413,SKU000413,Teal Retro Runners,footwear,sneakers,UrbanThreads,3115,1006.05,67.7,college_students,High-Value,382,13.57,3.2,true,2023-03-29,product_csv,PROD_ROW_413
+M001,PROD000414,SKU000414,Mustard Low Top Sneakers,footwear,sneakers,UrbanThreads,4551,2662.71,41.49,college_students,Returning,317,3.71,4.0,true,2023-07-06,product_csv,PROD_ROW_414
+M001,PROD000415,SKU000415,Navy Minimalist Photo Frame,lifestyle,decor,UrbanThreads,2256,1177.42,47.81,family_buyers,New,203,8.32,2.8,true,2023-07-27,product_csv,PROD_ROW_415
+M001,PROD000416,SKU000416,Maroon Macrame Wall Hanging,lifestyle,decor,UrbanThreads,2879,2294.67,20.3,family_buyers,High-Value,317,12.31,4.5,true,2024-05-30,product_csv,PROD_ROW_416
+M001,PROD000417,SKU000417,Blue Breathable Linen Top,fashion,linen_shirt,UrbanThreads,2034,1125.6,44.66,young_professionals,High-Value,342,9.2,3.6,false,2023-02-14,product_csv,PROD_ROW_417
+M001,PROD000418,SKU000418,Grey Printed Bedsheet,home,bedsheet,UrbanThreads,3933,1680.3,57.28,family_buyers,High-Value,421,17.93,4.4,true,2024-12-14,product_csv,PROD_ROW_418
+M001,PROD000419,SKU000419,Red Macrame Wall Hanging,lifestyle,decor,UrbanThreads,1441,846.69,41.24,family_buyers,New,155,12.37,3.9,true,2023-09-21,product_csv,PROD_ROW_419
+M001,PROD000420,SKU000420,Orange Minimal White Sneakers,footwear,sneakers,UrbanThreads,3366,1893.72,43.74,college_students,New,202,13.44,4.2,true,2023-11-20,product_csv,PROD_ROW_420
+M001,PROD000421,SKU000421,White Moisturising Cream,beauty,skincare,UrbanThreads,2044,1004.9,50.84,working_women,Returning,447,11.19,3.9,true,2024-09-18,product_csv,PROD_ROW_421
+M001,PROD000422,SKU000422,Brown Sling Bag,accessories,handbag,UrbanThreads,4184,2285.9,45.37,working_women,Returning,101,8.03,3.9,true,2023-09-17,product_csv,PROD_ROW_422
+M001,PROD000423,SKU000423,Brown Backpack,accessories,handbag,UrbanThreads,1930,732.92,62.02,working_women,High-Value,127,9.49,4.2,true,2023-06-15,product_csv,PROD_ROW_423
+M001,PROD000424,SKU000424,Green Straight Cut Denim,fashion,denim_jeans,UrbanThreads,2385,976.73,59.05,young_professionals,New,209,19.33,2.5,true,2023-04-04,product_csv,PROD_ROW_424
+M001,PROD000425,SKU000425,Teal Slip-On Sneakers,footwear,sneakers,UrbanThreads,2782,2229.84,19.85,college_students,New,199,2.52,2.6,true,2024-01-29,product_csv,PROD_ROW_425
+M001,PROD000426,SKU000426,Orange Night Repair Cream,beauty,skincare,UrbanThreads,534,176.14,67.01,working_women,High-Value,263,9.34,3.0,true,2024-11-03,product_csv,PROD_ROW_426
+M001,PROD000427,SKU000427,Grey Scented Candle,lifestyle,decor,UrbanThreads,2854,1624.49,43.08,family_buyers,High-Value,96,13.81,3.4,true,2024-11-01,product_csv,PROD_ROW_427
+M001,PROD000428,SKU000428,White Fleece Hoodie,fashion,hoodie,UrbanThreads,2635,1727.98,34.42,college_students,Returning,310,4.81,2.5,false,2024-12-21,product_csv,PROD_ROW_428
+M001,PROD000429,SKU000429,Green Summer Linen Shirt,fashion,linen_shirt,UrbanThreads,2286,899.84,60.64,young_professionals,Returning,427,6.25,4.0,true,2023-07-19,product_csv,PROD_ROW_429
+M001,PROD000430,SKU000430,Mustard Vitamin C Serum,beauty,skincare,UrbanThreads,1368,1031.1,24.63,working_women,New,296,2.38,3.2,true,2023-04-30,product_csv,PROD_ROW_430
+M001,PROD000431,SKU000431,Teal Wooden Desk Organiser,lifestyle,decor,UrbanThreads,2753,1961.3,28.76,family_buyers,Returning,298,10.19,3.1,true,2023-12-14,product_csv,PROD_ROW_431
+M001,PROD000432,SKU000432,Teal Night Repair Cream,beauty,skincare,UrbanThreads,411,240.4,41.51,working_women,New,205,13.04,5.0,true,2024-11-24,product_csv,PROD_ROW_432
+M001,PROD000433,SKU000433,Brown Microfibre Bedcover,home,bedsheet,UrbanThreads,2388,774.92,67.55,family_buyers,High-Value,14,14.32,3.2,true,2023-10-22,product_csv,PROD_ROW_433
+M001,PROD000434,SKU000434,Pink Comfort Joggers,fashion,joggers,UrbanThreads,754,410.93,45.5,fitness_lifestyle,Returning,170,7.72,4.7,true,2023-10-03,product_csv,PROD_ROW_434
+M001,PROD000435,SKU000435,Blue Retro Runners,footwear,sneakers,UrbanThreads,1960,873.21,55.45,college_students,New,127,4.85,3.1,true,2024-09-25,product_csv,PROD_ROW_435
+M001,PROD000436,SKU000436,Brown Premium Leather Belt,accessories,belt,UrbanThreads,644,221.47,65.61,premium_buyers,High-Value,13,15.52,3.9,true,2023-02-13,product_csv,PROD_ROW_436
+M001,PROD000437,SKU000437,Mustard Sunscreen SPF50,beauty,skincare,UrbanThreads,2315,824.22,64.4,working_women,Returning,103,19.88,4.8,true,2023-10-14,product_csv,PROD_ROW_437
+M001,PROD000438,SKU000438,Brown Sport Deodorant,beauty,perfume,UrbanThreads,1649,1352.54,17.98,premium_buyers,Returning,491,11.27,3.8,true,2024-02-08,product_csv,PROD_ROW_438
+M001,PROD000439,SKU000439,Blue Cotton King Bedsheet,home,bedsheet,UrbanThreads,3559,2010.79,43.5,family_buyers,High-Value,14,1.22,3.0,true,2024-08-17,product_csv,PROD_ROW_439
+M001,PROD000440,SKU000440,Beige Block Print Kurta,fashion,kurta,UrbanThreads,1662,1241.62,25.29,working_women,New,147,9.96,4.0,true,2024-01-10,product_csv,PROD_ROW_440
+M001,PROD000441,SKU000441,Red Retro Runners,footwear,sneakers,UrbanThreads,2715,1261.41,53.54,college_students,Returning,447,8.61,3.6,false,2024-08-08,product_csv,PROD_ROW_441
+M001,PROD000442,SKU000442,Maroon Minimal White Sneakers,footwear,sneakers,UrbanThreads,3951,2771.74,29.85,college_students,High-Value,231,17.27,3.0,true,2023-06-03,product_csv,PROD_ROW_442
+M001,PROD000443,SKU000443,Navy Floral Mist,beauty,perfume,UrbanThreads,4691,3640.41,22.4,premium_buyers,High-Value,378,7.0,3.7,true,2023-09-14,product_csv,PROD_ROW_443
+M001,PROD000444,SKU000444,Red Scented Candle,lifestyle,decor,UrbanThreads,1068,872.53,18.3,family_buyers,Returning,439,12.97,3.6,true,2023-12-09,product_csv,PROD_ROW_444
+M001,PROD000445,SKU000445,Beige Crossbody Bag,accessories,handbag,UrbanThreads,2910,1922.7,33.93,working_women,New,189,17.48,4.9,false,2023-07-23,product_csv,PROD_ROW_445
+M001,PROD000446,SKU000446,Brown Minimalist Photo Frame,lifestyle,decor,UrbanThreads,1853,1243.73,32.88,family_buyers,Returning,406,14.99,4.7,true,2024-01-26,product_csv,PROD_ROW_446
+M001,PROD000447,SKU000447,Blue Macrame Wall Hanging,lifestyle,decor,UrbanThreads,1085,539.98,50.23,family_buyers,Returning,333,12.63,3.5,true,2023-03-15,product_csv,PROD_ROW_447
+M001,PROD000448,SKU000448,Beige Zip Hoodie,fashion,hoodie,UrbanThreads,2283,1542.66,32.43,college_students,High-Value,146,12.5,3.5,true,2024-03-31,product_csv,PROD_ROW_448
+M001,PROD000449,SKU000449,Red Sling Bag,accessories,handbag,UrbanThreads,2305,876.32,61.98,working_women,High-Value,130,17.3,4.9,true,2024-12-18,product_csv,PROD_ROW_449
+M001,PROD000450,SKU000450,Grey Sateen Bedsheet,home,bedsheet,UrbanThreads,2325,1844.53,20.67,family_buyers,Returning,290,2.02,4.4,true,2024-06-20,product_csv,PROD_ROW_450
+M001,PROD000451,SKU000451,Olive Relaxed Linen Shirt,fashion,linen_shirt,UrbanThreads,1117,897.65,19.64,young_professionals,Returning,127,5.7,3.2,true,2024-10-03,product_csv,PROD_ROW_451
+M001,PROD000452,SKU000452,Green Retro Runners,footwear,sneakers,UrbanThreads,1116,927.02,16.93,college_students,Returning,452,10.05,4.9,true,2024-07-07,product_csv,PROD_ROW_452
+M001,PROD000453,SKU000453,Navy Crossbody Bag,accessories,handbag,UrbanThreads,2249,1180.82,47.5,working_women,High-Value,393,13.08,3.9,true,2024-06-20,product_csv,PROD_ROW_453
+M001,PROD000454,SKU000454,Teal Microfibre Bedcover,home,bedsheet,UrbanThreads,2671,1477.55,44.68,family_buyers,Returning,167,7.95,3.1,true,2023-11-07,product_csv,PROD_ROW_454
+M001,PROD000455,SKU000455,Green Graphic Oversized Tee,fashion,oversized_tshirt,UrbanThreads,751,519.9,30.77,streetwear_lovers,New,362,18.52,4.9,true,2024-05-03,product_csv,PROD_ROW_455
+M001,PROD000456,SKU000456,Brown Reversible Belt,accessories,belt,UrbanThreads,998,520.6,47.84,premium_buyers,High-Value,201,4.58,4.7,true,2024-03-23,product_csv,PROD_ROW_456
+M001,PROD000457,SKU000457,Navy Floral Mist,beauty,perfume,UrbanThreads,3698,2694.64,27.13,premium_buyers,Returning,330,5.55,4.4,false,2024-09-19,product_csv,PROD_ROW_457
+M001,PROD000458,SKU000458,Olive Linen Bedsheet,home,bedsheet,UrbanThreads,1800,1121.23,37.71,family_buyers,New,79,6.5,4.1,true,2024-09-24,product_csv,PROD_ROW_458
+M001,PROD000459,SKU000459,Orange Night Repair Cream,beauty,skincare,UrbanThreads,2314,1727.9,25.33,working_women,New,35,19.42,2.6,true,2023-04-15,product_csv,PROD_ROW_459
+M001,PROD000460,SKU000460,Navy Backpack,accessories,handbag,UrbanThreads,866,625.21,27.8,working_women,New,7,5.13,3.6,true,2024-05-25,product_csv,PROD_ROW_460
+M001,PROD000461,SKU000461,Orange Tote Bag,accessories,handbag,UrbanThreads,3504,2823.79,19.41,working_women,New,146,15.74,2.7,true,2024-04-26,product_csv,PROD_ROW_461
+M001,PROD000462,SKU000462,Teal Canvas Sneakers,footwear,sneakers,UrbanThreads,4346,2782.02,35.99,college_students,New,403,14.58,3.5,true,2024-03-29,product_csv,PROD_ROW_462
+M001,PROD000463,SKU000463,Grey Low Top Sneakers,footwear,sneakers,UrbanThreads,4010,1708.07,57.4,college_students,High-Value,116,9.98,4.2,true,2023-11-16,product_csv,PROD_ROW_463
+M001,PROD000464,SKU000464,Pink Premium Leather Belt,accessories,belt,UrbanThreads,1924,643.42,66.56,premium_buyers,New,139,10.14,3.2,true,2024-01-05,product_csv,PROD_ROW_464
+M001,PROD000465,SKU000465,White Relaxed Denim Jeans,fashion,denim_jeans,UrbanThreads,3591,2194.86,38.88,young_professionals,New,416,6.25,2.8,true,2023-09-06,product_csv,PROD_ROW_465
+M001,PROD000466,SKU000466,Mustard Streetwear Oversized Top,fashion,oversized_tshirt,UrbanThreads,1103,575.86,47.79,streetwear_lovers,New,137,4.0,2.7,true,2024-09-25,product_csv,PROD_ROW_466
+M001,PROD000467,SKU000467,Black Canvas Belt,accessories,belt,UrbanThreads,1719,1315.63,23.47,premium_buyers,New,74,10.27,3.3,true,2024-07-25,product_csv,PROD_ROW_467
+M001,PROD000468,SKU000468,Brown Printed Bedsheet,home,bedsheet,UrbanThreads,3702,2753.8,25.61,family_buyers,Returning,380,3.56,4.7,true,2024-05-11,product_csv,PROD_ROW_468
+M001,PROD000469,SKU000469,Green Microfibre Bedcover,home,bedsheet,UrbanThreads,2922,1363.49,53.34,family_buyers,High-Value,105,11.33,3.3,true,2024-04-24,product_csv,PROD_ROW_469
+M001,PROD000470,SKU000470,White Woven Belt,accessories,belt,UrbanThreads,716,431.63,39.72,premium_buyers,High-Value,197,9.63,4.4,true,2024-06-02,product_csv,PROD_ROW_470
+M001,PROD000471,SKU000471,Teal Woody Eau de Parfum,beauty,perfume,UrbanThreads,3581,1515.45,57.68,premium_buyers,Returning,379,2.2,4.9,true,2024-02-01,product_csv,PROD_ROW_471
+M001,PROD000472,SKU000472,Brown Slip-On Sneakers,footwear,sneakers,UrbanThreads,1630,835.91,48.72,college_students,Returning,338,7.12,2.7,true,2024-11-05,product_csv,PROD_ROW_472
+M001,PROD000473,SKU000473,Maroon Graphic Oversized Tee,fashion,oversized_tshirt,UrbanThreads,581,214.73,63.04,streetwear_lovers,New,258,4.64,2.6,true,2024-10-19,product_csv,PROD_ROW_473
+M001,PROD000474,SKU000474,Green Night Repair Cream,beauty,skincare,UrbanThreads,2716,1926.28,29.08,working_women,New,320,14.64,2.5,true,2023-08-02,product_csv,PROD_ROW_474
+M001,PROD000475,SKU000475,Teal Cotton King Bedsheet,home,bedsheet,UrbanThreads,2616,1071.09,59.06,family_buyers,Returning,295,15.13,4.7,true,2024-01-13,product_csv,PROD_ROW_475
+M001,PROD000476,SKU000476,Maroon Linen Bedsheet,home,bedsheet,UrbanThreads,1787,999.0,44.1,family_buyers,Returning,49,18.95,4.9,false,2023-04-10,product_csv,PROD_ROW_476
+M001,PROD000477,SKU000477,Green Straight Cut Denim,fashion,denim_jeans,UrbanThreads,1775,1320.22,25.62,young_professionals,High-Value,330,19.0,3.9,true,2024-07-25,product_csv,PROD_ROW_477
+M001,PROD000478,SKU000478,Brown Sport Deodorant,beauty,perfume,UrbanThreads,3531,1691.45,52.1,premium_buyers,New,95,16.06,3.9,true,2024-05-31,product_csv,PROD_ROW_478
+M001,PROD000479,SKU000479,Green Woven Belt,accessories,belt,UrbanThreads,1306,439.55,66.34,premium_buyers,High-Value,176,17.05,3.5,true,2024-10-10,product_csv,PROD_ROW_479
+M001,PROD000480,SKU000480,Mustard Moisturising Cream,beauty,skincare,UrbanThreads,2605,1432.5,45.01,working_women,High-Value,484,15.15,3.4,true,2024-04-08,product_csv,PROD_ROW_480
+M001,PROD000481,SKU000481,Black Vitamin C Serum,beauty,skincare,UrbanThreads,1464,764.69,47.77,working_women,New,465,6.73,3.3,true,2023-08-16,product_csv,PROD_ROW_481
+M001,PROD000482,SKU000482,Black Canvas Sneakers,footwear,sneakers,UrbanThreads,4763,2598.15,45.45,college_students,High-Value,484,11.86,2.7,true,2024-04-16,product_csv,PROD_ROW_482
+M001,PROD000483,SKU000483,Navy Canvas Belt,accessories,belt,UrbanThreads,1150,414.81,63.93,premium_buyers,New,141,16.41,2.7,true,2024-02-14,product_csv,PROD_ROW_483
+M001,PROD000484,SKU000484,Orange Scented Candle,lifestyle,decor,UrbanThreads,1728,715.22,58.61,family_buyers,Returning,432,18.08,4.3,true,2023-04-08,product_csv,PROD_ROW_484
+M001,PROD000485,SKU000485,Black Wooden Desk Organiser,lifestyle,decor,UrbanThreads,1961,1582.21,19.32,family_buyers,Returning,188,17.72,3.6,true,2023-05-04,product_csv,PROD_ROW_485
+M001,PROD000486,SKU000486,Pink Low Top Sneakers,footwear,sneakers,UrbanThreads,1220,832.49,31.76,college_students,Returning,286,11.73,3.3,true,2024-12-15,product_csv,PROD_ROW_486
+M001,PROD000487,SKU000487,Black Low Top Sneakers,footwear,sneakers,UrbanThreads,4976,3010.04,39.51,college_students,New,123,9.21,4.5,true,2023-06-01,product_csv,PROD_ROW_487
+M001,PROD000488,SKU000488,White Low Top Sneakers,footwear,sneakers,UrbanThreads,3339,1469.42,55.99,college_students,Returning,144,2.62,3.8,true,2024-12-15,product_csv,PROD_ROW_488
+M001,PROD000489,SKU000489,Blue Slip-On Sneakers,footwear,sneakers,UrbanThreads,1810,1052.83,41.83,college_students,High-Value,325,19.94,3.8,true,2023-09-06,product_csv,PROD_ROW_489
+M001,PROD000490,SKU000490,Brown Essential Polo Shirt,fashion,polo_tshirt,UrbanThreads,1161,549.61,52.66,young_professionals,New,353,8.86,3.4,true,2023-07-15,product_csv,PROD_ROW_490
+M001,PROD000491,SKU000491,Mustard Tote Bag,accessories,handbag,UrbanThreads,3296,2494.77,24.31,working_women,High-Value,430,19.81,3.6,true,2023-05-30,product_csv,PROD_ROW_491
+M001,PROD000492,SKU000492,Teal Fresh Cologne,beauty,perfume,UrbanThreads,2234,1056.8,52.69,premium_buyers,High-Value,446,2.63,4.3,true,2023-09-06,product_csv,PROD_ROW_492
+M001,PROD000493,SKU000493,Maroon Minimalist Photo Frame,lifestyle,decor,UrbanThreads,455,300.85,33.88,family_buyers,Returning,240,9.95,3.3,true,2024-07-04,product_csv,PROD_ROW_493
+M001,PROD000494,SKU000494,Green Slip-On Sneakers,footwear,sneakers,UrbanThreads,4072,2881.91,29.23,college_students,High-Value,383,19.94,4.2,true,2024-11-15,product_csv,PROD_ROW_494
+M001,PROD000495,SKU000495,Mustard Lounge Joggers,fashion,joggers,UrbanThreads,688,488.14,29.05,fitness_lifestyle,Returning,112,15.99,4.0,true,2023-02-24,product_csv,PROD_ROW_495
+M001,PROD000496,SKU000496,White Floral Mist,beauty,perfume,UrbanThreads,2821,1369.2,51.46,premium_buyers,New,19,6.56,4.7,true,2024-01-31,product_csv,PROD_ROW_496
+M001,PROD000497,SKU000497,Green Minimal White Sneakers,footwear,sneakers,UrbanThreads,4701,3180.22,32.35,college_students,New,105,4.78,4.9,true,2024-07-28,product_csv,PROD_ROW_497
+M001,PROD000498,SKU000498,Black Sateen Bedsheet,home,bedsheet,UrbanThreads,2867,1956.13,31.77,family_buyers,Returning,391,3.98,3.4,true,2023-12-27,product_csv,PROD_ROW_498
+M001,PROD000499,SKU000499,Grey Crossbody Bag,accessories,handbag,UrbanThreads,3058,1233.78,59.65,working_women,Returning,465,20.0,5.0,true,2024-07-22,product_csv,PROD_ROW_499
+M001,PROD000500,SKU000500,Navy Canvas Belt,accessories,belt,UrbanThreads,1203,587.89,51.13,premium_buyers,High-Value,205,10.89,4.2,true,2024-10-02,product_csv,PROD_ROW_500
