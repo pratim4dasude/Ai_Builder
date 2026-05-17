@@ -298,8 +298,13 @@ The brief asks for one "AI employee" that watches data, proposes a ₹-saving ac
 
 
 ### Future Improvements
-- Wire the watcher above; let it run 3 days against a real merchant; tune the 15% threshold and confidence calc.
+
+- Add geospatial route optimization for logistics using map-based distance, traffic, delivery density, and warehouse location signals to improve shortest-path planning and reduce delivery delays.
+- Add marketing creative intelligence that uses sales, campaign, and customer response data to recommend better images, styling, captions, and content formats for each audience segment, such as Gen Z, millennials, or older buyers.
+- Extend the growth worker to learn which creative style works best for each segment and channel, then generate campaign suggestions based on observed engagement and conversion patterns.
+- Wire the watcher above; let it run 3 days against a real merchant; tune the 15% threshold and confidence calculation.
 - Replace one CSV connector with a real Shopify sandbox end-to-end.
-- Build the eval harness — 20 golden questions per worker, numeric tolerances on KPIs.
-- Tenant-namespace memory + add the API-key gateway.
-- Promote provenance to a single `UniversalRow` shape across all three workers (logistics already does this — extend to finance and growth).
+- Build the eval harness — 20 golden questions per worker, with numeric tolerances on KPIs.
+- Add tenant-namespaced memory and an API-key gateway for merchant isolation.
+- Promote provenance to a single `UniversalRow` shape across all three workers. Logistics already follows this pattern; extend it to finance and growth.
+
