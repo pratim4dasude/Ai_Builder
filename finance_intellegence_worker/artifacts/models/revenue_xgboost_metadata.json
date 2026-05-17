@@ -1,0 +1,24 @@
+{
+  "model_used": "xgboost_regressor",
+  "features_used": [
+    "order_count",
+    "avg_order_value",
+    "day_of_week",
+    "day",
+    "month",
+    "week_of_year",
+    "lag_1_revenue",
+    "lag_3_revenue",
+    "lag_7_revenue",
+    "rolling_3_revenue",
+    "rolling_7_revenue"
+  ],
+  "model_metrics": {
+    "mae": 6915.1,
+    "mape": 3.77,
+    "train_days": 286,
+    "test_days": 72
+  },
+  "training_rows": 358,
+  "last_training_date": "2024-12-30"
+}
