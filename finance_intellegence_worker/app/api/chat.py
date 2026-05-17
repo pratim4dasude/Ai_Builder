@@ -3,6 +3,7 @@ import asyncio
 from fastapi import APIRouter
 from pydantic import BaseModel
 from sse_starlette.sse import EventSourceResponse
+
 from app.services.data_validation import FinanceDataValidationService
 from app.agents.state import FinanceAgentState
 from app.agents.supervisor_agent import SupervisorAgent
@@ -10,6 +11,10 @@ from app.agents.planner_agent import PlannerAgent
 from app.runtime.agent_runtime import FinanceAgentRuntime
 from app.utils.sse import sse_event
 from app.utils.json_cleaner import clean_json
+from app.utils.response_formatter import (
+    build_finance_response,
+    build_stream_final_response,
+)
 
 router = APIRouter()
 
@@ -32,18 +37,20 @@ async def run_finance_workflow(request: ChatRequest) -> FinanceAgentState:
     state = supervisor.plan(state)
     state = planner.create_plan(state)
 
-    for step in state.execution_plan:
-        if step["mode"] == "parallel":
-            state = await runtime.run_parallel(step["agents"], state)
-        else:
-            for agent_name in step["agents"]:
-                state = await runtime.run_agent(agent_name, state)
+    state = await runtime.run_plan(state)
 
     return state
 
 
 @router.post("/chat")
 async def chat(request: ChatRequest):
+    state = await run_finance_workflow(request)
+
+    return build_finance_response(state)
+
+
+@router.post("/chat/raw")
+async def chat_raw(request: ChatRequest):
     state = await run_finance_workflow(request)
 
     response = {
@@ -59,6 +66,7 @@ async def chat(request: ChatRequest):
         "memo": state.final_memo,
         "errors": state.errors,
         "period": state.period,
+        "metadata": state.metadata,
     }
 
     return clean_json(response)
@@ -77,10 +85,18 @@ async def chat_stream(request: ChatRequest):
         planner = PlannerAgent()
         runtime = FinanceAgentRuntime()
 
-        yield sse_event("status", {"stage": "started"})
+        yield sse_event("status", {
+            "stage": "started",
+            "message": "Finance Intelligence workflow started.",
+        })
 
-        yield sse_event("agent_started", {"agent": "SupervisorAgent"})
+        yield sse_event("agent_started", {
+            "agent": "SupervisorAgent",
+            "task": "Select required finance specialist agents.",
+        })
+
         state = supervisor.plan(state)
+
         yield sse_event(
             "agent_completed",
             {
@@ -89,8 +105,13 @@ async def chat_stream(request: ChatRequest):
             },
         )
 
-        yield sse_event("agent_started", {"agent": "PlannerAgent"})
+        yield sse_event("agent_started", {
+            "agent": "PlannerAgent",
+            "task": "Create sequential and parallel execution plan.",
+        })
+
         state = planner.create_plan(state)
+
         yield sse_event(
             "agent_completed",
             {
@@ -101,27 +122,40 @@ async def chat_stream(request: ChatRequest):
 
         for step in state.execution_plan:
             if step["mode"] == "parallel":
-                yield sse_event("parallel_started", {"agents": step["agents"]})
+                yield sse_event("parallel_started", {
+                    "step": step["step"],
+                    "agents": step["agents"],
+                    "reason": step.get("reason"),
+                })
+
                 state = await runtime.run_parallel(step["agents"], state)
-                yield sse_event("parallel_completed", {"agents": step["agents"]})
+
+                yield sse_event("parallel_completed", {
+                    "step": step["step"],
+                    "agents": step["agents"],
+                })
 
             else:
                 for agent_name in step["agents"]:
-                    yield sse_event("agent_started", {"agent": agent_name})
+                    yield sse_event("agent_started", {
+                        "agent": agent_name,
+                        "step": step["step"],
+                    })
+
                     state = await runtime.run_agent(agent_name, state)
-                    yield sse_event("agent_completed", {"agent": agent_name})
+
+                    yield sse_event("agent_completed", {
+                        "agent": agent_name,
+                        "step": step["step"],
+                    })
 
         yield sse_event(
             "final_output",
-            clean_json({
-                "period": state.period,
-                "statistics_analysis": state.statistics_analysis,
-                "memo": state.final_memo,
-                "errors": state.errors,
-            }),
+            build_stream_final_response(state),
         )
 
     return EventSourceResponse(event_generator())
+
 
 @router.get("/validate-data")
 async def validate_data():
@@ -131,4 +165,3 @@ async def validate_data():
         "files": service.validate_required_files(),
         "columns": service.validate_columns(),
     }
-
