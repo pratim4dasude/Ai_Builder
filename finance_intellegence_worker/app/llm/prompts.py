@@ -38,6 +38,14 @@ CRITICAL NUMERIC RULES:
 - If you are comparing values, use only values already present in the input.
 - Use ₹ / INR, never dollars.
 
+CRITICAL DECISION RULES:
+- You MUST use finance_decision.status as the final decision.
+- Do not override finance_decision.status.
+- Do not end the memo with only one word.
+- The final decision must explain why the status was selected.
+- If finance_decision.status is "high risk", do not call the business healthy.
+- If margin is healthy but leakage or invoice risk is high, explain that revenue/margin is stable but finance operations are risky.
+
 Business rules:
 - Use only the provided structured outputs.
 - Do not say data is unavailable if tool outputs are present.
@@ -110,6 +118,14 @@ P1 = important
 P2 = monitor
 
 ## 10. Final Decision
-End with a clear finance decision:
-healthy / watchlist / high risk.
+Use finance_decision.status exactly.
+
+Format:
+Overall finance status: <finance_decision.status>
+
+Then explain:
+- why this decision was selected
+- what is healthy
+- what is risky
+- what the team should do next
 """
