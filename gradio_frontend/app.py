@@ -1,229 +1,270 @@
 import os
 import sys
+import time
 import json
-import asyncio
 import subprocess
-import threading
-import httpx
+import requests
 from datetime import datetime
 import gradio as gr
 
 
-# ── Paths ──────────────────────────────────────────────────────────────────────
-BASE_DIR     = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 FRONTEND_DIR = os.path.dirname(os.path.abspath(__file__))
-OUTPUT_DIR   = os.path.join(FRONTEND_DIR, "outputs")
+OUTPUT_DIR = os.path.join(FRONTEND_DIR, "outputs")
+
 os.makedirs(OUTPUT_DIR, exist_ok=True)
 
 MAX_PREVIEW_CHARS = 1800
 
-# ── Worker registry ────────────────────────────────────────────────────────────
 WORKERS = {
     "Finance Worker": {
-        "path":       os.path.join(BASE_DIR, "finance_intellegence_worker"),
-        "port":       8001,
-        "url":        "http://127.0.0.1:8001/chat",
+        "path": os.path.join(BASE_DIR, "finance_intellegence_worker"),
+        "port": 8001,
+        "url": "http://127.0.0.1:8001/chat",
         "session_id": "finance-gradio-session",
     },
     "Logistics Worker": {
-        "path":       os.path.join(BASE_DIR, "logistics_operations_worker"),
-        "port":       8002,
-        "url":        "http://127.0.0.1:8002/chat",
+        "path": os.path.join(BASE_DIR, "logistics_operations_worker"),
+        "port": 8002,
+        "url": "http://127.0.0.1:8002/chat",
         "session_id": "logistics-gradio-session",
     },
     "Growth Worker": {
-        "path":       os.path.join(BASE_DIR, "growth_marketing_worker"),
-        "port":       8003,
-        "url":        "http://127.0.0.1:8003/chat",
+        "path": os.path.join(BASE_DIR, "growth_marketing_worker"),
+        "port": 8003,
+        "url": "http://127.0.0.1:8003/chat",
         "session_id": "growth-gradio-session",
     },
 }
 
-_processes: list[subprocess.Popen] = []
+processes = []
 
 
-# ── Worker lifecycle ───────────────────────────────────────────────────────────
-
-def _start_worker(worker_name: str, config: dict) -> None:
-    worker_path = config["path"]
-    port        = config["port"]
-
-    if not os.path.exists(worker_path):
-        print(f"[ERROR] Folder not found for {worker_name}: {worker_path}")
-        return
-
-    # Quick sync check only at startup (before event loop is running)
+def is_server_running(port):
     try:
-        r = httpx.get(f"http://127.0.0.1:{port}/docs", timeout=1)
-        if r.status_code == 200:
-            print(f"[OK] {worker_name} already running on port {port}")
-            return
-    except Exception:
-        pass
-
-    print(f"[STARTING] {worker_name} on port {port}")
-    process = subprocess.Popen(
-        [sys.executable, "-m", "uvicorn", "app.main:app",
-         "--host", "127.0.0.1", "--port", str(port)],
-        cwd=worker_path,
-    )
-    _processes.append(process)
-
-
-def _poll_ready(worker_name: str, port: int, timeout: int = 30) -> None:
-    """Background thread — polls until worker is reachable."""
-    import time
-    deadline = time.monotonic() + timeout
-    while time.monotonic() < deadline:
-        try:
-            r = httpx.get(f"http://127.0.0.1:{port}/docs", timeout=1)
-            if r.status_code == 200:
-                print(f"[READY] {worker_name} on port {port}")
-                return
-        except Exception:
-            pass
-        time.sleep(1)
-    print(f"[WARNING] {worker_name} did not become ready within {timeout}s")
-
-
-def start_all_workers() -> None:
-    print("\n==============================")
-    print("STARTING AI BUILDER WORKERS")
-    print("==============================\n")
-    for name, cfg in WORKERS.items():
-        _start_worker(name, cfg)
-        threading.Thread(
-            target=_poll_ready,
-            args=(name, cfg["port"]),
-            daemon=True,
-        ).start()
-
-
-def shutdown_workers() -> None:
-    print("\n[INFO] Shutting down workers...")
-    for p in _processes:
-        try:
-            p.terminate()
-        except Exception:
-            pass
-
-
-# ── Async health check (safe inside event loop) ────────────────────────────────
-
-async def _is_worker_up(port: int) -> bool:
-    """Async health check — never blocks the event loop."""
-    try:
-        async with httpx.AsyncClient(timeout=2) as c:
-            r = await c.get(f"http://127.0.0.1:{port}/docs")
-            return r.status_code == 200
+        response = requests.get(
+            f"http://127.0.0.1:{port}/docs",
+            timeout=2,
+        )
+        return response.status_code == 200
     except Exception:
         return False
 
 
-# ── Response helpers ───────────────────────────────────────────────────────────
+def start_worker(worker_name, config):
+    worker_path = config["path"]
+    port = config["port"]
 
-def _to_text(value) -> str:
+    if not os.path.exists(worker_path):
+        print(f"[ERROR] Folder not found for {worker_name}: {worker_path}")
+        return None
+
+    if is_server_running(port):
+        print(f"[OK] {worker_name} already running on port {port}")
+        return None
+
+    print(f"[STARTING] {worker_name} on port {port}")
+
+    process = subprocess.Popen(
+        [
+            sys.executable,
+            "-m",
+            "uvicorn",
+            "app.main:app",
+            "--host",
+            "127.0.0.1",
+            "--port",
+            str(port),
+        ],
+        cwd=worker_path,
+    )
+
+    processes.append(process)
+    return process
+
+
+def start_all_workers():
+    print("\n==============================")
+    print("STARTING AI BUILDER WORKERS")
+    print("==============================\n")
+
+    for worker_name, config in WORKERS.items():
+        start_worker(worker_name, config)
+
+    print("\n[INFO] Waiting for workers to start...")
+    time.sleep(8)
+
+    for worker_name, config in WORKERS.items():
+        if is_server_running(config["port"]):
+            print(f"[READY] {worker_name} running at http://127.0.0.1:{config['port']}")
+        else:
+            print(f"[WARNING] {worker_name} may still be starting on port {config['port']}")
+
+    print("\n==============================")
+    print("WORKER STARTUP CHECK COMPLETE")
+    print("==============================\n")
+
+
+def to_text(value):
     if isinstance(value, (dict, list)):
         return json.dumps(value, indent=2, ensure_ascii=False)
     return str(value)
 
 
-def _extract_response(data) -> str:
+def extract_response(data):
     if isinstance(data, str):
         return data
+
     if not isinstance(data, dict):
-        return _to_text(data)
-    keys = ["answer", "response", "final_response", "formatted_response",
-            "message", "result", "summary", "output", "memo", "recommendation"]
-    for k in keys:
-        if data.get(k):
-            return _to_text(data[k])
-    nested = data.get("data")
-    if isinstance(nested, dict):
-        for k in keys:
-            if nested.get(k):
-                return _to_text(nested[k])
-    return _to_text(data)
+        return to_text(data)
+
+    possible_keys = [
+        "answer",
+        "response",
+        "final_response",
+        "formatted_response",
+        "message",
+        "result",
+        "summary",
+        "output",
+        "memo",
+        "recommendation",
+    ]
+
+    for key in possible_keys:
+        if key in data and data[key]:
+            return to_text(data[key])
+
+    if "data" in data and isinstance(data["data"], dict):
+        nested_data = data["data"]
+
+        for key in possible_keys:
+            if key in nested_data and nested_data[key]:
+                return to_text(nested_data[key])
+
+    return to_text(data)
 
 
-def _save_output(worker_name: str, query: str, text: str) -> str:
-    safe  = worker_name.lower().replace(" ", "_")
-    ts    = datetime.now().strftime("%Y%m%d_%H%M%S")
-    fpath = os.path.join(OUTPUT_DIR, f"{safe}_{ts}.txt")
-    with open(fpath, "w", encoding="utf-8") as f:
-        f.write(f"Worker: {worker_name}\nQuery: {query}\nTime: {ts}\n\n{text}")
-    return fpath
+def save_full_output(worker_name, query, full_text):
+    safe_worker = worker_name.lower().replace(" ", "_")
+    timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+
+    file_path = os.path.join(
+        OUTPUT_DIR,
+        f"{safe_worker}_{timestamp}.txt",
+    )
+
+    content = (
+        f"Worker: {worker_name}\n"
+        f"Query: {query}\n"
+        f"Time: {timestamp}\n\n"
+        f"{full_text}"
+    )
+
+    with open(file_path, "w", encoding="utf-8") as f:
+        f.write(content)
+
+    return file_path
 
 
-def _make_preview(full_text: str, file_path: str) -> str:
+def make_preview(worker_name, query, full_text, file_path):
+    full_len = len(full_text)
+
     preview = full_text[:MAX_PREVIEW_CHARS]
-    if len(full_text) > MAX_PREVIEW_CHARS:
+
+    if full_len > MAX_PREVIEW_CHARS:
         preview += (
-            "\n\n--- Preview trimmed ---\n"
+            "\n\n--- Preview trimmed to keep browser fast ---\n"
             f"Full response saved at:\n{file_path}"
         )
+
     preview += (
-        f"\n\n------------------------------\n"
-        f"Characters: {len(full_text)} | File: {file_path}"
+        "\n\n------------------------------\n"
+        f"Full response characters: {full_len}\n"
+        f"Saved file: {file_path}"
     )
+
     return preview
 
 
-# ── Core async handler ─────────────────────────────────────────────────────────
-
-async def call_worker_async(worker_name: str, message: str) -> str:
+def call_worker(worker_name, message):
     if not message or not message.strip():
         return "Please enter a question."
 
-    cfg = WORKERS[worker_name]
+    config = WORKERS[worker_name]
 
-    # Async health check — will NOT block the event loop
-    if not await _is_worker_up(cfg["port"]):
-        return (
-            f"[WARNING] {worker_name} is not reachable on port {cfg['port']}.\n"
-            "Please check the worker process and try again."
-        )
+    payload = {
+        "query": message,
+        "session_id": config["session_id"],
+    }
 
-    payload = {"query": message, "session_id": cfg["session_id"]}
-    print(f"\n[REQUEST] {worker_name} -> {cfg['url']}\nQUERY: {message}")
+    print("\n==============================")
+    print(f"REQUEST TO: {worker_name}")
+    print(f"URL: {config['url']}")
+    print(f"QUERY: {message}")
+    print("==============================\n")
 
     try:
-        async with httpx.AsyncClient(timeout=180) as client:
-            response = await client.post(cfg["url"], json=payload)
+        response = requests.post(
+            config["url"],
+            json=payload,
+            timeout=180,
+        )
 
-        print(f"[{worker_name}] status={response.status_code} "
-              f"size={len(response.text)} chars")
+        print(f"[{worker_name}] Status Code: {response.status_code}")
+        print(f"[{worker_name}] Raw response size: {len(response.text)} chars")
 
         if response.status_code != 200:
-            err = (f"Error from {worker_name}\n\n"
-                   f"Status: {response.status_code}\n\n{response.text}")
-            fp = _save_output(worker_name, message, err)
-            return _make_preview(err, fp)
+            error_text = (
+                f"Error from {worker_name}\n\n"
+                f"Status Code: {response.status_code}\n\n"
+                f"{response.text}"
+            )
+
+            file_path = save_full_output(worker_name, message, error_text)
+            return make_preview(worker_name, message, error_text, file_path)
 
         try:
-            data        = response.json()
-            full_output = _extract_response(data)
+            data = response.json()
+
+            if isinstance(data, dict):
+                print(f"[{worker_name}] JSON keys: {list(data.keys())}")
+            else:
+                print(f"[{worker_name}] JSON type: {type(data)}")
+
+            full_output = extract_response(data)
+
         except Exception as e:
-            print(f"[{worker_name}] JSON parse error: {e}")
+            print(f"[{worker_name}] JSON parse error: {str(e)}")
             full_output = response.text
 
-        fp      = _save_output(worker_name, message, full_output)
-        preview = _make_preview(full_output, fp)
-        print(f"[{worker_name}] Done. Saved -> {fp}")
+        print(f"[{worker_name}] Extracted output size: {len(full_output)} chars")
+
+        file_path = save_full_output(worker_name, message, full_output)
+        preview = make_preview(worker_name, message, full_output, file_path)
+
+        print(f"[{worker_name}] Full output saved at: {file_path}")
+        print(f"[{worker_name}] Response completed.")
+        print("==============================\n")
+
         return preview
 
-    except httpx.ConnectError:
-        return (f"Could not connect to {worker_name}. "
-                f"Is it running on port {cfg['port']}?")
-    except httpx.TimeoutException:
-        return f"{worker_name} timed out (180 s). The request may still be processing."
+    except requests.exceptions.ConnectionError as e:
+        print(f"[{worker_name}] CONNECTION ERROR")
+        print(str(e))
+        return f"Could not connect to {worker_name}. Check port {config['port']}."
+
+    except requests.exceptions.Timeout:
+        print(f"[{worker_name}] TIMEOUT ERROR")
+        return f"{worker_name} took too long to respond."
+
     except Exception as e:
-        return f"Unexpected error from {worker_name}: {e}"
+        print(f"[{worker_name}] UNEXPECTED ERROR")
+        print(str(e))
+        return f"Unexpected error from {worker_name}: {str(e)}"
 
 
-# ── UI builder ─────────────────────────────────────────────────────────────────
-
-def create_worker_tab(worker_name: str, description: str, examples: list) -> None:
+def create_worker_tab(worker_name, description, examples):
     gr.Markdown(f"### {worker_name}")
     gr.Markdown(description)
 
@@ -235,7 +276,7 @@ def create_worker_tab(worker_name: str, description: str, examples: list) -> Non
 
     with gr.Row():
         submit_btn = gr.Button("Send", variant="primary")
-        clear_btn  = gr.Button("Clear")
+        clear_btn = gr.Button("Clear")
 
     output_box = gr.Textbox(
         label="Response Preview",
@@ -244,19 +285,23 @@ def create_worker_tab(worker_name: str, description: str, examples: list) -> Non
         interactive=False,
     )
 
-    # THE KEY FIX: cache_examples=False stops Gradio from running your handler
-    # for every example the moment the tab is opened/switched to.
-    gr.Examples(
-        examples=examples,
+    # Show examples as plain text — no gr.Examples component at all.
+    # gr.Examples was the cause of the tab-switch freeze.
+    examples_text = "**Try these:**  \n" + "  \n".join(f"• {ex}" for ex in examples)
+    gr.Markdown(examples_text)
+
+    submit_btn.click(
+        fn=lambda msg: call_worker(worker_name, msg),
         inputs=input_box,
-        label="Example questions",
-        cache_examples=False,
+        outputs=output_box,
     )
 
-    handler = lambda msg: call_worker_async(worker_name, msg)
+    input_box.submit(
+        fn=lambda msg: call_worker(worker_name, msg),
+        inputs=input_box,
+        outputs=output_box,
+    )
 
-    submit_btn.click(fn=handler, inputs=input_box, outputs=output_box)
-    input_box.submit(fn=handler, inputs=input_box, outputs=output_box)
     clear_btn.click(
         fn=lambda: ("", ""),
         inputs=None,
@@ -264,7 +309,15 @@ def create_worker_tab(worker_name: str, description: str, examples: list) -> Non
     )
 
 
-# ── Entry point ────────────────────────────────────────────────────────────────
+def shutdown_workers():
+    print("\n[INFO] Shutting down workers...")
+
+    for process in processes:
+        try:
+            process.terminate()
+        except Exception:
+            pass
+
 
 if __name__ == "__main__":
     start_all_workers()

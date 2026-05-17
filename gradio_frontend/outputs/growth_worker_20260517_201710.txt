@@ -1,0 +1,150 @@
+Worker: Growth Worker
+Query: Create a marketing action plan for this week
+Time: 20260517_201710
+
+{
+  "decision": "Promote Black Oversized T-Shirt",
+  "query_intent": "promotion_recommendation",
+  "product_to_promote": "Black Oversized T-Shirt",
+  "product_id": "PROD000001",
+  "sku": "SKU000001",
+  "promotion_readiness_score": 83.02,
+  "recommended_channel": "Instagram",
+  "recommended_posting_time": "19:00 - 20:00",
+  "target_segment": "college_students",
+  "recommended_city": "Bangalore",
+  "recommended_customer_type": "Returning",
+  "confidence": {
+    "score": 0.95,
+    "percentage": 95,
+    "level": "high",
+    "reason": "High confidence because Black Oversized T-Shirt has strong sales, campaign, margin, inventory, and low-risk signals.",
+    "signals": [
+      "Strong sales growth signal",
+      "Strong campaign engagement signal",
+      "Healthy margin signal",
+      "Good conversion signal",
+      "Low risk signal",
+      "Enough inventory available",
+      "Low refund rate",
+      "Posting time recommendation available",
+      "Target segment recommendation available"
+    ]
+  },
+  "next_best_actions": [
+    {
+      "priority": "high",
+      "action": "Launch Black Oversized T-Shirt campaign on Instagram",
+      "reason": "Black Oversized T-Shirt has the highest promotion readiness score."
+    },
+    {
+      "priority": "high",
+      "action": "Schedule the main post during 19:00 - 20:00",
+      "reason": "This time window has the strongest historical campaign performance."
+    },
+    {
+      "priority": "medium",
+      "action": "Target college_students customers in Bangalore",
+      "reason": "This segment/location has the strongest product demand signal."
+    },
+    {
+      "priority": "medium",
+      "action": "Avoid promoting White Crossbody Bag",
+      "reason": "Risk score is 65 and promotion readiness score is -2.09."
+    },
+    {
+      "priority": "high",
+      "action": "Avoid promoting Olive Cotton King Bedsheet",
+      "reason": "Risk score is 95 and promotion readiness score is -2.69."
+    },
+    {
+      "priority": "high",
+      "action": "Avoid promoting White Cotton Summer Dress",
+      "reason": "Risk score is 95 and promotion readiness score is -2.93."
+    },
+    {
+      "priority": "medium",
+      "action": "Use generated content variants across Instagram, WhatsApp, Email, and Facebook",
+      "reason": "The LLM content agent created channel-specific copy for execution."
+    },
+    {
+      "priority": "medium",
+      "action": "Review campaign performance after 24 hours",
+      "reason": "This helps validate the recommendation and adjust spend quickly."
+    }
+  ],
+  "llm_used_for_content": true,
+  "llm_used_for_memo": true,
+  "executive_summary": "The Black Oversized T-Shirt is positioned for immediate promotion due to its high engagement and sales potential among college students in Bangalore. With a promotion readiness score of 83.02, it is well-suited for Instagram marketing during peak hours.",
+  "campaign_plan": {
+    "primary_channel": "Instagram",
+    "posting_window": "19:00 - 20:00",
+    "audience": "college_students",
+    "message_angle": "everyday comfort, demand, and clean style",
+    "execution_steps": [
+      "Run the primary post during the recommended time window.",
+      "Utilize the generated content variants across Instagram, WhatsApp, and Email.",
+      "Avoid promoting low-scoring products that may dilute brand effectiveness."
+    ]
+  },
+  "content_strategy": "Use everyday-style positioning with a clear product-first message.",
+  "execution_steps": [
+    "Run the primary post during the recommended time window.",
+    "Utilize the generated content variants across Instagram, WhatsApp, and Email.",
+    "Avoid promoting low-scoring products that may dilute brand effectiveness."
+  ],
+  "risk_note": "Avoid promoting low-scoring products with weak sales, low margin, high refund rates, or poor campaign engagement as they may negatively impact overall brand perception.",
+  "why": [
+    "Strong recent sales growth signal",
+    "Strong campaign engagement and conversion signal",
+    "Healthy margin for promotion",
+    "Low promotion risk based on inventory, refund, and margin checks",
+    "Enough inventory available for campaign push"
+  ],
+  "recommended_action": "Promote the Black Oversized T-Shirt on Instagram during 19:00 - 20:00 to maximize visibility and engagement.",
+  "suggested_content": {
+    "instagram": "✨ Elevate your everyday look with our Black Oversized T-Shirt! Perfect for college vibes in Bangalore. Get yours tonight between 7-8 PM! 🖤 #FashionForward",
+    "facebook": "Upgrade your wardrobe with the Black Oversized T-Shirt. A stylish choice for comfort and versatility, ideal for your daily college life.",
+    "whatsapp": "Hey there! 🌟 Check out the Black Oversized T-Shirt—perfect for your college days. Available now! Best time to grab it: 7-8 PM.",
+    "email_subject": "Discover Your New Favorite: Black Oversized T-Shirt",
+    "email_body": "Hi there, the Black Oversized T-Shirt is trending and ready for you! It's a fantastic choice for college students in Bangalore. Don't miss out!",
+    "linkedin": "The Black Oversized T-Shirt is gaining traction among college students. A strong choice for comfort and style, ideal for everyday wear."
+  },
+  "products_to_avoid": [
+    {
+      "product_id": "PROD000285",
+      "product_name": "White Crossbody Bag",
+      "risk_score": 65,
+      "promotion_readiness_score": -2.09,
+      "reason": "low margin, high refund rate, weak campaign engagement, weak or negative sales growth"
+    },
+    {
+      "product_id": "PROD000139",
+      "product_name": "Olive Cotton King Bedsheet",
+      "risk_score": 95,
+      "promotion_readiness_score": -2.69,
+      "reason": "high overall risk score, high refund rate, weak campaign engagement, weak or negative sales growth"
+    },
+    {
+      "product_id": "PROD000377",
+      "product_name": "White Cotton Summer Dress",
+      "risk_score": 95,
+      "promotion_readiness_score": -2.93,
+      "reason": "high overall risk score, high refund rate, weak campaign engagement, weak or negative sales growth"
+    },
+    {
+      "product_id": "PROD000299",
+      "product_name": "Teal Night Repair Cream",
+      "risk_score": 85,
+      "promotion_readiness_score": -3.26,
+      "reason": "high overall risk score, low margin, weak campaign engagement, weak or negative sales growth"
+    },
+    {
+      "product_id": "PROD000342",
+      "product_name": "Maroon Tote Bag",
+      "risk_score": 85,
+      "promotion_readiness_score": -3.37,
+      "reason": "high overall risk score, low margin, weak campaign engagement, weak or negative sales growth"
+    }
+  ]
+}

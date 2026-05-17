@@ -1,0 +1,12 @@
+Worker: Logistics Worker
+Query: Create a dispatch plan for pending orders in Bangalore today
+Time: 20260517_201445
+
+{
+  "assigned_orders": 100,
+  "unassigned_orders": 0,
+  "total_clusters": 31,
+  "total_routes": 31,
+  "total_risky_orders": 65,
+  "estimated_total_route_distance_km": 44.31
+}
