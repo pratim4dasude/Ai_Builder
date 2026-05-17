@@ -296,10 +296,8 @@ The brief asks for one "AI employee" that watches data, proposes a ₹-saving ac
 | Connectors poll on demand | API rate limits hit fast | Queue (Celery / Cloud Tasks) running connectors in background, writing to per-merchant store. |
 | Watcher runs in-process | Single-process bottleneck | Move watcher to a worker queue; one run per merchant in parallel. |
 
-### Hours / sessions
-TODO before final submission — pulled from `git log`.
 
-### What I'd do with another week
+### Future Improvements
 - Wire the watcher above; let it run 3 days against a real merchant; tune the 15% threshold and confidence calc.
 - Replace one CSV connector with a real Shopify sandbox end-to-end.
 - Build the eval harness — 20 golden questions per worker, numeric tolerances on KPIs.
