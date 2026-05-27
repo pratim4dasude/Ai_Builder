@@ -306,4 +306,4 @@ The brief asks for one "AI employee" that watches data, proposes a ₹-saving ac
 - Replace one CSV connector with a real Shopify sandbox end-to-end.
 - Build the eval harness — 20 golden questions per worker, with numeric tolerances on KPIs.
 - Add tenant-namespaced memory and an API-key gateway for merchant isolation.
-
+- Promote provenance to a single `UniversalRow` shape across all three workers. Logistics already follows this pattern; extend it to finance and growth.
